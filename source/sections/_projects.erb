@@ -1,0 +1,41 @@
+<% if data.resume.projects? %>
+    <section class="section projects-section">
+
+        <h2 class="section-title"><i class="fas fa-hat-wizard"></i> <%= data.resume.headers.projects %></h2>
+        <hr class="thirteen" />
+
+        <div class="grid">
+          <% data.resume.projects.each do |project| %>
+            <div class="c-100 c-33--lap-and-up grid__cell">
+              <div class="item">
+                <ul class="demo-2 effect list-unstyled">
+                  <!-- <li class="hidden-block"><p class="zero"><%= project.extra %></p></li> -->
+                  <li class="img-block">
+                    <img src="/images/<%= project.img %>" class="item_img top" />
+                  </li>
+                </ul>
+
+                <h2 class="item_title">
+                <% if project.url? %>
+                  <a href="<%= project.url %>" target=_blank><span class="fn url org"><%= project.name %></span></a>
+                <% else %>
+                  <span class="fn org"><%= project.name %></span>
+                <% end %>
+                </h2>
+
+                <% if project.long_desc? %>
+                  <div class="adr">
+                      <h3 class="item-subtitle fn org"><%= project.long_desc %></h3>
+                  </div>
+                <% end %>
+
+                <div class="project-tagline">
+                  <%= Maruku.new(project.desc).to_html %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+
+    </section>
+<% end %>

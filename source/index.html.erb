@@ -1,28 +1,37 @@
-<!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
-<%= partial 'header' %>
+---
+title: Derek Scott Resume
+layout: "layout"
+---
 
-<body>
-    <div class="wrapper">
-        <div class="sidebar-wrapper">
-            <%= partial 'profile' %>
-            <%= partial 'contact' %>
-            <%= partial 'education' %>
-            <%= partial 'languages' %>
-            <%= partial 'interests' %>
-            <%= partial 'download' %>
+<canvas id="granim-canvas"></canvas>
+
+<div class="grid-sandbox" id="resume_content">
+  <div class="grid">
+      <div class="c-33--lap-and-up c-25--desk-and-up grid__cell accent-back sidekick">
+        <%= partial 'sections/profile' %>
+        <%= partial 'sections/contact' %>
+
+        <div class="inside">
+          <%= partial 'sections/interests' %>
+          <%= partial 'sections/references' %>
+          <%= partial 'sections/skills' %>
         </div>
 
-        <div class="main-wrapper">
-            <%= partial 'summary' %>
-            <%= partial 'experiences' %>
-            <%= partial 'projects' %>
-            <%= partial 'skills' %>
-        </div>
-    </div>
-    <%= partial 'footer' %>
-</body>
+        <%= partial 'sections/download' %>
+      </div>
+      <div class="c-66--lap-and-up c-75--desk-and-up grid__cell superhero">
+        <%= partial 'sections/summary' %>
+        <%= partial 'sections/experiences' %>
+        <%= partial 'sections/education' %>
+        <%= partial 'sections/portfolio' %>
+        <%= partial 'sections/skills' %>
+        <%= partial 'sections/projects' %>
 
-</html>
+        <footer class="footer">
+            <div class="body-by-dev">
+                <small class="copyright">Designed with <i class="fa fa-heart fa-2x"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">HUEMENT</a> for everyone</small>
+            </div>
+        </footer>
+      </div>
+  </div>
+</div>

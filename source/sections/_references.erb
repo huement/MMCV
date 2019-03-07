@@ -1,0 +1,27 @@
+<% if data.resume.references? %>
+<div class="references-container container-block">
+
+  <h2 class="print-title printable"><%= data.resume.headers.references %></h2>
+  <h3 class="sidebar-title not-printable"><%= data.resume.headers.references %></h3>
+
+  <div class="push p20"></div>
+  <div class="push p10"></div>
+
+  <div class="references-list wrap">
+    <% data.resume.references.each do |peep| %>
+      <div class="peep-peep grid">
+        <div class="grid__cell c-25">
+          <% if peep.icon? %><img src='/images/<%= peep.icon %>' class='peep-icon'/><% end %>
+        </div>
+        <div class="grid__cell c-75">
+          <div class="peep-info">
+            <p class="peep-name"><% if peep.title? %><span class="peep-title"><%= peep.title %></span><% end %> <%= peep.name %></p>
+            <p class="peep-contact"><%= peep.phone %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
+<% end %>

@@ -1,0 +1,30 @@
+<% if data.resume.education? %>
+<section class="section edu-section">
+
+  <h2 class="section-title red"><i class="fas fa-book-dead"></i><%= data.resume.headers.education %></h2>
+  <hr class="thirteen" />
+
+  <div class="grid">
+    <% data.resume.education.each_with_index do |edu, index| %>
+    <div class="c-50--lap-and-up grid__cell">
+      <div class="item edu-item-<%= index %>">
+        <h2 class="item_title"><span class="degree"><%= edu.degree %></span><% if edu.grade? %><span class="footnote gpa not-printable"><%= edu.grade %></span><% end %><%= edu.focus %></h2>
+        <% if edu.url? %>
+        <h3 class="item-subtitle url org"><a href="<%= edu.url %>"><%= edu.name %></a>
+        <% else %>
+        <h3 class="item-subtitle fn org"><%= edu.name %>
+        <% end %>
+        <% if edu.time? %><span class="footnote time"><%= edu.time %></span><% end %>
+        </h3>
+        <% if edu.study? %>
+        <div class="study">
+            <p><%= edu.study %></p>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+</section>
+<% end %>

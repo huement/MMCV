@@ -1,0 +1,181 @@
+/* ======= Base ======= */
+
+body {
+    font-family: $body-font;
+    color: $text-color-secondary;
+    background:$smoky-white;
+    font-size: 1rem;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+// -------------------- [ HEADERS ]
+
+h1, h2, h3, h4, h5, h6  {
+    font-weight: 700;
+    font-family: $title-font;
+    letter-spacing: 2px;
+}
+
+h1 {
+  @include responsive-font-size(3rem);
+}
+
+h2 {
+  @include responsive-font-size(2.4rem);
+}
+
+h3 {
+  @include responsive-font-size(2rem);
+}
+
+h4 {
+  @include responsive-font-size(1.8rem);
+}
+
+
+// -------------------- [ BASE TEXT ]
+
+a {
+    color: darken($theme-color, 15%);
+    @include transition (all 0.4s ease-in-out);
+    &:hover {
+        text-decoration: underline;
+        color: darken($theme-color, 30%);
+    }
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+p {
+    line-height: 1.5;
+    @include responsive-font-size(1.2rem);
+}
+
+pre, code {
+  font-family: $mono-font;
+  @include responsive-font-size(1rem);
+}
+
+.anaglyph span {
+  color: 000;
+  font-family: $title-font;
+  text-shadow:  0.25rem -0.25rem rgba(magenta, 0.75),
+               -0.25rem -0.25rem rgba(cyan, 0.75),
+                0        0.5rem  rgba(yellow, 0.75);
+}
+
+@media screen {
+  .wrapper {
+      background: $theme-color;
+      max-width: 100%;
+      margin: 0 auto;
+      position: relative;
+      @include box-shadow(0px 2px 4px rgba(0,0,0,0.1));
+  }
+
+  .grid-sandbox {
+    padding: 1rem 1.25rem 1rem 2rem;
+    margin: 0;
+    z-index: 2;
+    display: block;
+    position: relative;
+  }
+}
+
+.footer {
+    padding: 60px 0 40px 0;
+
+    .copyright {
+        line-height: 1.6;
+        color: $text-color-secondary;
+        @include responsive-font-size(1rem);
+    }
+
+    .fa-heart {
+        color: $heart;
+    }
+
+}
+
+
+.rounded {
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+hr.thirteen {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+  margin-bottom: 30px;
+}
+
+hr.icon {
+  margin: 25px auto 30px;
+  padding: 0;
+  border: 0;
+  border-top: solid 3px;
+  text-align: center;
+}
+
+hr.icon:after {
+  content: "\f0e7";
+  display: inline-block;
+  position: relative;
+  top: -1.7rem;
+  padding: 0 1rem;
+  font-family: FontAwesome;
+  font-size: 3rem;
+  background-color: #fff; // Must Match Page Background
+}
+
+// -------------------- [ UTILITY ]
+.push {
+  margin: 0 auto;
+  clear: both;
+  display: block;
+  position: relative;
+  width: 100%;
+
+  &.p10 {
+    height: 10px;
+  }
+
+  &.p20 {
+    height: 20px;
+  }
+
+  &.p40 {
+    height: 40px;
+  }
+
+  &.p50 {
+    height: 50px;
+  }
+}
+
+@media screen {
+  .printable, .printable > * {
+    display: none !important;
+  }
+
+  .not-printable, .not-printable > * {
+    display: block !important;
+  }
+}
+
+@media print {
+  .printable, .printable > * {
+    display: block !important;
+  }
+
+  .not-printable, .not-printable > * {
+    display: none !important;
+  }
+}

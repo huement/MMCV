@@ -1,0 +1,27 @@
+<section class="section experiences">
+
+    <h2 class="section-title red"><i class="fas fa-address-card"></i><%= data.resume.headers.jobs %></h2>
+    <hr class="thirteen"/>
+
+    <% data.resume.jobs.each do |job| %>
+    <div class="item">
+        <div class="meta">
+            <div class="upper-row">
+                <h2 class="job-title"><%= job.title %></h2>
+            </div>
+            <div class="company">
+              <h3 class="location">
+              <% if job.url? %>
+                <a href="<%= job.url%>" target=_blank><%= job.company %></a>
+              <% else %>
+                <%= job.company %>
+              <% end %>
+              <% if job.time? %><span class="exp time"><%= job.time %></span><% end %>
+              </h3>
+            </div>
+        </div>
+        <div class="exp details"><%= Maruku.new(job.desc).to_html %></div>
+    </div>
+    <% end %>
+
+</section>

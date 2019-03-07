@@ -1,0 +1,78 @@
+//
+//
+//    :::::::..  . :::::: .::::::.  ...    :::.        :  . ::::::
+//    ;;;;``;;;; ;;;;'''';;;`    `  ;;     ;;;;; .    ;;; ;;;;''''
+//     [[[ /[[['  [[cccc '[==/[[[[ [['     [[[[[[[   [[[[  [[cccc
+//     $$$$$$c    $$""""   '''    $$$      $$$$$$$$$$$"$$$ $$""""
+//     888b "88bo 888oo __88b    dP88    .d888888 Y88" 888o888oo __
+//     MMMM   "W" """"YUMMM"YMmMY"  "YmmMMMM""MMM  M'  "MMM""""YUMMM
+//    ---------------------------------------------------------------
+//
+//
+
+
+// -------------------- [BASIC]
+$theme-color:          #7768ae;
+$text-color:           #e9e9e9;
+$text-color-secondary: #535353;
+$text-grey:            #666666;
+$divider:              #D3D4D4;
+$lighter-grey:         #e4e4e4;
+$darker-grey:          #7b7b7b;
+$medium-grey:          #8c8c8c;
+$smoky-white:          #f7f7f7;
+$heart:                #cc2d55;
+
+// -------------------- [THEME]
+$red:                  #cc2d55;
+$orange:               #e15c3b;
+$yellow:               #fdbe45;
+$blue:                 #1577a2;
+$green:                #33a760;
+$violet:               #63519e;
+$white:                #ffffff;
+$black:                #292824;
+$grey:                 #535353;
+
+
+// -------------------- [WORDS]
+@font-face {
+  font-family: "fira_monoregular";
+  src: url("../fonts/firamono-regular-webfont.eot");
+  src: url("../fonts/firamono-regular-webfont.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/firamono-regular-webfont.woff2") format("woff2"),
+  url("../fonts/firamono-regular-webfont.woff") format("woff"),
+  url("../fonts/firamono-regular-webfont.ttf") format("truetype"),
+  url("../fonts/firamono-regular-webfont.svg#fira_monoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "exo";
+  src: url("../fonts/exo2-medium-webfont.eot");
+  src: url("../fonts/exo2-medium-webfont.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/exo2-medium-webfont.woff2") format("woff2"),
+  url("../fonts/exo2-medium-webfont.woff") format("woff"),
+  url("../fonts/exo2-medium-webfont.ttf") format("truetype"),
+  url("../fonts/exo2-medium-webfont.svg#exo2") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// @font-face {
+//   font-family: "quicksand_lightregular";
+//   src: url("../fonts/quicksand-light-webfont.eot");
+//   src: url("../fonts/quicksand-light-webfont.eot?#iefix") format("embedded-opentype"),
+//   url("../fonts/quicksand-light-webfont.woff2") format("woff2"),
+//   url("../fonts/quicksand-light-webfont.woff") format("woff"),
+//   url("../fonts/quicksand-light-webfont.ttf") format("truetype"),
+//   url("../fonts/quicksand-light-webfont.svg#quicksand_lightregular") format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// -------------------- [FONTS]
+$body-font: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$title-font: "exo", sans-serif;
+$mono-font: "fira_monoregular", monospace;

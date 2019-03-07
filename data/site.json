@@ -1,0 +1,45 @@
+{
+  "baseURL": "/",
+  "primary": "#7767AD",
+  "secondary": "#3BB273",
+  "colors": [
+    {
+      "name": "fire",
+      "hex" : "#CB2D54"
+    },
+    {
+      "name": "pumpkin",
+      "hex" : "#E9724C"
+    },
+    {
+      "name": "daylight",
+      "hex" : "#FEC856"
+    },
+    {
+      "name": "envy",
+      "hex" : "#3BB273"
+    },
+    {
+      "name": "water",
+      "hex" : "#108AB1"
+    },
+    {
+      "name": "ultraviolence",
+      "hex" : "#7767AD"
+    }
+  ],
+  "contact": "derek@huement.com",
+  "javascript": {
+    "jquery": {
+      "remote": "https://code.jquery.com/jquery-3.3.1.min.js",
+      "local" : "assets/javascripts/vendor/jquery-3.3.1.min.js"
+    },
+    "ui": [
+      "https://unpkg.com/aos@next/dist/aos.js"
+    ],
+    "analytics": {
+      "library": "https://www.google-analytics.com/analytics.js",
+      "id"     : "UA-XXXXX-Y"
+    }
+  }
+}

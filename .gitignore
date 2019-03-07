@@ -12,8 +12,11 @@
 
 # Ignore Sass' cache
 /.sass-cache
+/source/.sass-cache/
 
 /tmp/
+/.tmp/
 /Gemfile.lock
 /.ruby-version
 /vendor
+node_modules/

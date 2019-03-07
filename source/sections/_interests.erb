@@ -1,0 +1,18 @@
+<% if data.resume.interests? %>
+<div class="interests-container container-block not-printable" >
+  <h3 class="sidebar-title"><%= data.resume.headers.interests %></h3>
+
+  <div class="speech-bubble">
+    <div id="keywords"></div>
+  </div>
+
+  <ul class="list-unstyled interests-list printable">
+    <% data.resume.interests.each do |interest| %>
+      <li><%= interest %></li>
+    <% end %>
+  </ul>
+
+</div>
+
+<div class="push p10"></div>
+<% end %>

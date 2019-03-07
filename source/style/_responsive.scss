@@ -1,0 +1,101 @@
+.mobile-nav-wrap {
+  display: none;
+  margin-left: -300px;
+  width: 280px;
+  height: auto;
+  position: relative;
+}
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 801px) {
+
+  .sidebar-wrapper {
+    position: static;
+    width: inherit;
+  }
+
+  .main-wrapper {
+    padding: 30px;
+  }
+
+  .main-wrapper .time {
+    position: static;
+    display: block;
+    margin-top: 5px;
+  }
+
+  .main-wrapper .upper-row {
+    margin-bottom: 0;
+  }
+
+  .mobile-nav-wrap {
+    display: block;
+  }
+
+  .mobile-nav-wrap.open {
+    margin-left: 0;
+  }
+
+  .contact-container {
+    margin-top: -1.8rem!important;
+  }
+
+  .profile .avatar {
+    height: 400px!important;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+  .edu-section {
+    .item_title span.footnote.gpa {
+      display: none!important;
+    }
+
+    .edu-item-0 {
+      padding-right: 0!important;
+    }
+
+    .edu-item-1 {
+      padding-left: 0!important;
+    }
+  }
+}
+
+/* Medium devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+
+    .skillset .level-title {
+        display: inline-block;
+        float: left;
+        width: 30%;
+        margin-bottom: 0;
+    }
+
+    .skillset .level-bar {
+        display: inline-block;
+        width: 70%;
+        float: left;
+        position: relative;
+        top: 1px;
+    }
+
+    .contact-container {
+      margin-top: -1.8rem!important;
+    }
+
+    .profile .avatar {
+      height: 400px!important;
+    }
+}
+
+/* Large devices (large desktops, 1160px and up) */
+@media (min-width: 1160px) {
+
+}
+
+
+/* Ex-Large devices (large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+}
