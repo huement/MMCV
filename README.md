@@ -1,11 +1,9 @@
 ```bash
-              ▄▄▄  ▄▄▄  ▄▄▄  ▄▄▄     ▄▄▄▄   ▄▄    ▄▄
-              ███  ███  ███  ███   ██▀▀▀▀█  ▀██  ██▀
-              ████████  ████████  ██▀        ██  ██
-              ██ ██ ██  ██ ██ ██  ██         ██  ██
-              ██ ▀▀ ██  ██ ▀▀ ██  ██▄         ████
-              ██    ██  ██    ██   ██▄▄▄▄█    ████
-              ▀▀    ▀▀  ▀▀    ▀▀     ▀▀▀▀     ▀▀▀▀
+                             __     __     __ __         _______ _______ _______  
+                  .--------.|__|.--|  |.--|  |  |.-----.|   |   |   _   |    |  |
+                  |        ||  ||  _  ||  _  |  ||  -__||       |       |       |
+                  |__|__|__||__||_____||_____|__||_____||__|_|__|___|___|__|____|
+                  -----------------------[RESUME BUILDER]------------------------
 ```
 
 # Middle Man Curriculum Vitae
@@ -16,17 +14,17 @@ MMCV is an HTML resume builder (with optional PDF version) made in Ruby with [Mi
 
 It has the following features:
 
- * Separation between content and data, all your resume information is an YAML file.
- * Uses your Gravatar picture.
- * Fork this project for maintaining multiple versions of your resume in sync.
- * Markdown for formatting of the longer paragraphs.
- * You can preview your changes with the included Middleman server (with livereload).
- * Automatic PDF generation using [wkhtmltopdf](http://wkhtmltopdf.org).
- * Turnkey deployment to a `http://yourusername.github.com/resume` page with no configuration necessary. 
+-   Separation between content and data, all your resume information is an YAML file.
+-   Uses your Gravatar picture.
+-   Fork this project for maintaining multiple versions of your resume in sync.
+-   Markdown for formatting of the longer paragraphs.
+-   You can preview your changes with the included Middleman server (with livereload).
+-   Automatic PDF generation using [wkhtmltopdf](http://wkhtmltopdf.org).
+-   Turnkey deployment to a `http://yourusername.github.com/resume` page with no configuration necessary.
 
 ## Template
 
-A split column layout built with Avalanche.scss Grid framework.
+A split column layout built with [Avalanche.scss](http://colourgarden.net/avalanche/) Grid framework.
 
 The main build script can be altered by modifying `source/style/styles.css.scss`.
 
@@ -40,7 +38,7 @@ See the result: [MMCV Example](http://huement.github.com/MMCV/).
 
 ## In practice
 
-Fork this project and name it `resume` for example. 
+Fork this project and name it `resume` for example.
 Follow the installation instructions below.
 
 To create/update your resume, you will just need to edit the [`data/resume.yml`](https://github.com/reefab/ResumeMan/blob/master/data/resume.yml) file.
