@@ -50,38 +50,37 @@ Here is what it looks like:
 
 ```json
 {
-	"headers": {
-		"profile": "Profile",
-		"skills": "Technical Focus",
-		"portfolio": "Portfolio",
-		"techs": "Technical",
-		"jobs": "Work History",
-		"education": "Education",
-		"links": "Links",
-		"download": "Download PDF",
-		"age": "Level",
-		"projects": "Open Source Projects",
-		"interests": "Interests",
-		"references": "References"
-	},
-	"info": {
-		"myname": "Derek Scott",
-		"dob": "1985-01-15T00:00:00.000Z",
-		"shortdesc": "Job Title",
-		"email": "test@huement.com",
-		"phone": "(701)-777-1234",
-		"homepage": "https://huement.com/",
-		"github": "https://github.com/huement",
-		"linkedin": "http://linkedin/huement",
-		"twitter": "http://twitter.com/huement",
-		"address": {
-			"street": "11150 98th Street North",
-			"city": "Fargo",
-			"postal_code": 58103
-		},
-		"desc": "Prototype to production, I make napkin art real!"
-	},
-  ...
+  "headers": {
+  	"profile": "Profile",
+  	"skills": "Technical Focus",
+  	"portfolio": "Portfolio",
+  	"techs": "Technical",
+  	"jobs": "Work History",
+  	"education": "Education",
+  	"links": "Links",
+  	"download": "Download PDF",
+  	"age": "Level",
+  	"projects": "Open Source Projects",
+  	"interests": "Interests",
+  	"references": "References"
+  },
+  "info": {
+  	"myname": "Derek Scott",
+  	"dob": "1985-01-15T00:00:00.000Z",
+  	"shortdesc": "Job Title",
+  	"email": "test@huement.com",
+  	"phone": "(701)-777-1234",
+  	"homepage": "https://huement.com/",
+  	"github": "https://github.com/huement",
+  	"linkedin": "http://linkedin/huement",
+  	"twitter": "http://twitter.com/huement",
+  	"address": {
+  		"street": "11150 98th Street North",
+  		"city": "Fargo",
+  		"postal_code": 58103
+  	},
+  	"desc": "Prototype to production, I make napkin art real!"
+  },
 }
 ```
 
