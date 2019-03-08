@@ -86,7 +86,7 @@ if [ "$D" = true ]; then
 fi
 
 if [ "$E" = true ]; then
-    MIDDLECMD='middleman deploy'
+    MIDDLECMD='bundle exec middleman deploy'
     MIDMSG='BUILD & DEPLOY'
 fi
 

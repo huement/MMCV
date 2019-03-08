@@ -71,17 +71,6 @@ helpers do
   end
 end
 
-
-# activate :deploy do |deploy|
-#   deploy.method = :git
-#   # Optional Settings
-#   # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
-#   # deploy.branch   = 'custom-branch' # default: gh-pages
-#   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
-#   # deploy.commit_message = 'updating github pages'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
-#   deploy.build_before = true # default: false
-# end
-
 ###
 ### Server Environment
 ###
@@ -170,5 +159,20 @@ configure :production do
 
   # Middleman Production dev server run code
   # 'middleman server -e production'
+  # Middleman-deploy configuration
+  activate :deploy do |deploy|
+    deploy.deploy_method = :git
+    # remote is optional (default is "origin")
+    # run `git remote -v` to see a list of possible remotes
+    deploy.remote = "https://github.com/huement/MMCV"
 
+    # branch is optional (default is "gh-pages")
+    # run `git branch -a` to see a list of possible branches
+    deploy.branch = "gh-pages"
+
+    # strategy is optional (default is :force_push)
+    deploy.strategy = :submodule
+  end
 end
+
+

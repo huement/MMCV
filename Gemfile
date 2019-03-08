@@ -18,7 +18,7 @@ gem 'middleman-webpacker'
 gem 'middleman-minify-html'
 gem 'middleman-svg'
 gem 'middleman-s3_sync'
-gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
+gem 'middleman-deploy', git: 'https://github.com/middleman-contrib/middleman-deploy', branch: 'master'
 #gem 'middleman-pdfkit'
 #gem "middleman-sitemap", :git => "https://github.com/matsu911/middleman-sitemap"
 
