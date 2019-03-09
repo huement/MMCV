@@ -10,7 +10,7 @@
 # Ignore Sass' cache
 /.sass-cache
 /source/.sass-cache/
-
+/build
 /tmp/
 /.tmp/
 /Gemfile.lock
