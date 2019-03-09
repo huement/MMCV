@@ -1,0 +1,45 @@
+<div class="not-printable">
+  <section class="skills section not-printable">
+
+      <h2 class="section-title"><i class="fas fa-code"></i> <%= data.resume.headers.skills %></h2>
+      <hr class="thirteen" />
+
+      <div class="skillset">
+        <ul class="skill-list" id="skillset">
+          <% data.resume.languages.each_with_index do |skill, index| %>
+          <li class="skill">
+            <h3><%= skill.name %></h3>
+
+            <progress class="progbar skill-<%= index %>" max="100" value="<%= skill.level %>" data-level="<%= skill.level %>">
+              <strong>Skill Level: <%= skill.level %>%</strong>
+            </progress>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+
+  </section>
+</div>
+
+
+<div class="printable">
+  <section class="skills section printable">
+
+      <h2 class="print-title"><%= data.resume.headers.skills %></h2>
+
+      <div class="skillset">
+        <ul class="skill-list" id="skillset">
+          <% data.resume.languages.each_with_index do |skill, index| %>
+          <li class="skill">
+            <h3><%= skill.name %></h3>
+
+            <progress class="progbar skill-<%= index %>" max="100" value="<%= skill.level %>" data-level="<%= skill.level %>">
+              <strong>Skill Level: <%= skill.level %>%</strong>
+            </progress>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+
+  </section>
+</div>

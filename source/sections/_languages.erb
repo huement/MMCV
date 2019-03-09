@@ -1,0 +1,14 @@
+<% if data.resume.languages? %>
+  <div class="language-list wrap grid grid--center">
+    <% data.resume.languages.each do |lang| %>
+        <div class="c-33 grid__cell">
+          <div class="info">
+            <p><%= lang.level %></p>
+            <p><%= lang.name %></p>
+            <p><%= lang.label %></p>
+          </div>
+        </div>
+    <% end %>
+    <div class="push"></div>
+  </div>
+<% end %>

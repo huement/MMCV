@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "bulma": "^0.7.2",
+    "spectre.css": "^0.5.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@epegzz/sass-vars-loader": "^3.4.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-css": "^4.2.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.1",
+    "cssnano": "^4.1.7",
+    "dart-sass": "^1.14.3",
+    "fibers": "^3.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.10.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.4.0",
+    "purgecss": "^1.1.0",
+    "sass": "^1.14.3",
+    "sass-loader": "^7.1.0",
+    "scrollreveal": "^4.0.5",
+    "style-loader": "^0.23.1",
+    "sugarss": "^2.0.0",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  }
+}

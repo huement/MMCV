@@ -1,0 +1,20 @@
+<div class="not-printable">
+  <div class="push p10"></div>
+  <div class="push p10"></div>
+  <!--
+  <hr class="thirteen" /> -->
+
+  <% if data.resume.download? %>
+    <h3 class="sidebar-title"><%= data.resume.headers.download %></h3>
+  <% end %>
+
+  <!-- <div class="push p20"></div> -->
+
+  <div id="download_swoosh"></div>
+
+  <div class="hidden-print dlink">
+      <a href="resume.pdf" target="_blank" id="cmd" class="cdownl"><i class="fas fa-file fa-xl"></i> <%= data.resume.download.label %></a>
+  </div>
+
+  <!-- <div class="push p20"></div> -->
+</div>
