@@ -48,18 +48,18 @@ $grey:                 #535353;
   font-style: normal;
 }
 
-@font-face {
-  font-family: "exo";
-  src: url("../fonts/exo2-medium-webfont.eot");
-  src: url("../fonts/exo2-medium-webfont.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/exo2-medium-webfont.woff2") format("woff2"),
-  url("../fonts/exo2-medium-webfont.woff") format("woff"),
-  url("../fonts/exo2-medium-webfont.ttf") format("truetype"),
-  url("../fonts/exo2-medium-webfont.svg#exo2") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
+// @font-face {
+//   font-family: "exo";
+//   src: url("../fonts/exo2-medium-webfont.eot");
+//   src: url("../fonts/exo2-medium-webfont.eot?#iefix") format("embedded-opentype"),
+//   url("../fonts/exo2-medium-webfont.woff2") format("woff2"),
+//   url("../fonts/exo2-medium-webfont.woff") format("woff"),
+//   url("../fonts/exo2-medium-webfont.ttf") format("truetype"),
+//   url("../fonts/exo2-medium-webfont.svg#exo2") format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+//
 // @font-face {
 //   font-family: "quicksand_lightregular";
 //   src: url("../fonts/quicksand-light-webfont.eot");
@@ -73,6 +73,6 @@ $grey:                 #535353;
 // }
 
 // -------------------- [FONTS]
-$body-font: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$title-font: "exo", sans-serif;
+$body-font: 'Raleway', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$title-font: "Nanum Gothic", sans-serif;
 $mono-font: "fira_monoregular", monospace;

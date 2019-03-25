@@ -39,8 +39,21 @@ helpers do
     current_page.data.title
   end
 
-  def markdown(text)
-    Tilt['markdown'].new { text }.render
+  def markdown(contents)
+    renderer = Redcarpet::Render::HTML
+    markdown = Redcarpet::Markdown.new(
+      renderer,
+      autolink: true,
+      fenced_code_blocks: true,
+      footnotes: true,
+      highlight: true,
+      smartypants: true,
+      strikethrough: true,
+      tables: true,
+      with_toc_data: true
+    )
+    markdown.render(contents)
+    #Tilt['markdown'].new { text }.render
   end
 
   def image_url(source)
@@ -68,6 +81,10 @@ helpers do
       now = Date.today
       bday = DateTime.parse(birthday)
       now.year - bday.year - (Date.new(now.year, bday.month, bday.day) > now ? 1 : 0)
+  end
+
+  def slug_text(title)
+    slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   end
 end
 
@@ -115,12 +132,12 @@ end
 configure :build do
 
   activate :external_pipeline,
-       name: :webpack,
-       command: build? ?
-       "BUILD_PRODUCTION=1 ./node_modules/webpack/bin/webpack.js --bail -p" :
-       "BUILD_DEVELOPMENT=1 ./node_modules/webpack/bin/webpack.js --watch -d --progress --color",
-       source: ".tmp/dist",
-       latency: 1
+      name: :webpack,
+      command: build? ?
+      "BUILD_PRODUCTION=1 ./node_modules/webpack/bin/webpack.js --bail -p" :
+      "BUILD_DEVELOPMENT=1 ./node_modules/webpack/bin/webpack.js --watch -d --progress --color",
+      source: ".tmp/dist",
+      latency: 1
 
   # For example, change the Compass output style for deployment
   activate :minify_css

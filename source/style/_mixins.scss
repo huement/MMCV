@@ -2,117 +2,17 @@
 ///
 /// SAWTOOTH BORDER
 ///
-@mixin dojaggerborder($sc,$ec,$sx,$sy) {
-  background-image: linear-gradient(
-    45deg, $sc 33.333%,
-    $ec 33.333%, $ec 66.667%,
-    $sc 66.667%
-  ),
-  linear-gradient(
-    -45deg, $sc 33.333%,
-    $ec 33.333%, $ec 66.667%,
-    $sc 66.667%
-  );
-  background-size: $sx $sy;
+@mixin saw-tooth-vertical($width: 50px, $bg: #fff) {
+  background-image:
+    /* Bottom jagged */
+    linear-gradient(45deg, $bg 50%, transparent 50%),
+    linear-gradient(-45deg, $bg 50%, transparent 50%);
+  background-position:
+    /* Bottom jagged */
+    bottom left, bottom left;
+  background-size: $width $width;
+  background-repeat: repeat-x;
 }
-
-.section.sawtooth-data {
-  margin: 0 auto -4rem auto;
-  padding: 1.5rem 5rem 0 5rem;
- font-size: 1.2rem;
- line-height: 1.6;
- text-align:center;
-}
-
-.sawtooth-wrapper {
-  margin: 2rem -5% 2rem -5%;
-  position: relative;
-}
-
-.sawtooth-wrapper.sw-top {
- margin-top: -2rem;
-}
-
-.sawtooth-wrapper.sw-bottom {
- margin-bottom: -3rem;
-}
-
-.sawtooth-wrap-inner {
-  margin-top: -3rem;
-  position: relative;
-  -webkit-transform: rotate(-183deg); /* Safari */
-  -ms-transform: rotate(-183deg); /* IE 9 */
-  transform: rotate(-183deg);
-  z-index: 2;
-}
-
-.sawtooth-wrap-inner-shadow {
-  bottom: -.1rem;
-  left: 0;
-  position: absolute;
-  right: 0;
-  -webkit-transform: rotate(-183deg); /* Safari */
-  -ms-transform: rotate(-183deg); /* IE 9 */
-  transform: rotate(-183deg);
-  z-index: 1;
-}
-
-.sawtooth-wrap-inner-top {
-  margin-bottom: -3rem;
-  position: relative;
-  -webkit-transform: rotate(-3deg); /* Safari */
-  -ms-transform: rotate(-3deg); /* IE 9 */
-  transform: rotate(-3deg);
-  z-index: 2;
-}
-
-.sawtooth-wrap-inner-top-shadow {
-  left: 0;
-  margin-bottom: -2rem;
-  position: absolute;
-  right: 0;
-  top: -.1rem;
-  -webkit-transform: rotate(-3deg); /* Safari */
-  -ms-transform: rotate(-3deg); /* IE 9 */
-  transform: rotate(-3deg);
-  z-index: 1;
-}
-
-.sawtooth-border {
-  height: 5rem /* 100/20 */;
-  position: relative;
-  width: 100%;
-
-  &:before {
-    content: "";
-    display: block;
-    height: 60px;
-    position: absolute;
-    top: -20px;
-    width: 100%;
-  }
-}
-
-.lightgray-bg {
-  background: $lighter-grey;
-  z-index:2;
-}
-.lightgray-bg:before {
-  @include dojaggerborder(transparent,$lighter-grey,40px,80px);
-}
-
-.sawtooth-wrap-inner-top-shadow .lightgray-bg,
-.sawtooth-wrap-inner-shadow .lightgray-bg {
-  background: darken($lighter-grey,12%);
-}
-
-.sawtooth-wrap-inner-top-shadow .lightgray-bg:before,
-.sawtooth-wrap-inner-shadow .lightgray-bg:before {
-  @include dojaggerborder(transparent,darken($lighter-grey,12%),40px,80px);
-}
-
-
-
 
 @mixin gradient-text($gradient, $bg : 'light') {
   @supports(mix-blend-mode: lighten) {

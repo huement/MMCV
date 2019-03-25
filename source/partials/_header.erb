@@ -3,7 +3,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title><%= data.resume.info.myname || "Resume" %></title>
+  <title><%= current_page.data.title || "MMCV" %></title>
 
   <!-- load dynamic css -->
   <%= stylesheet_link_tag "styles" %>
@@ -16,17 +16,19 @@
   <%= tag :link, :rel => "apple-touch-icon", :href => "icon.png" %>
 
   <!-- meta social -->
-  <%= tag :meta, :content => 'Derek Scott Resume', :property => 'author' %>
-  <%= tag :meta, :content => 'Spotless Reputation for Commercial Cleaning and Maintenance', :property => 'description' %>
+  <%= tag :meta, :content => "#{data.resume.info.myname}'s Resume", :property => 'author' %>
+  <%= tag :meta, :content => "#{data.resume.info.desc}", :property => 'description' %>
 
-  <%= tag :meta, :content => 'https://www.huement.com/resume', :property => 'og:url' %>
+  <%= tag :meta, :content => "#{data.resume.info.homepage}", :property => 'og:url' %>
   <%= tag :meta, :content => 'website', :property => 'og:type' %>
-  <%= tag :meta, :content => 'Derek Scott | Resume', :property => 'og:title' %>
-  <%= tag :meta, :content => 'Spotless Reputation for Commercial Cleaning and Maintenance', :property => 'og:description' %>
+  <%= tag :meta, :content => "#{data.resume.info.myname}'s Resume", :property => 'og:title' %>
+  <%= tag :meta, :content => "#{data.resume.info.desc}", :property => 'og:description' %>
 
-  <!-- Plugins CSS -->
+  <!-- GLOBAL CSS -->
   <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Work+Sans" type='text/css'>
+
+  <!-- DYNAMIC CSS -->
+  <%= yield_content :assets %>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>

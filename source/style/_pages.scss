@@ -1,0 +1,386 @@
+#granim-canvas.art-page {
+  position: absolute;
+  width: 100%;
+  height: 420px;
+  z-index: -1;
+}
+
+.ascii {
+
+  background-color: #D2D4D4;
+  background-image:
+    linear-gradient(rgba(255,255,255,.5) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255,255,255,.5) 2px, transparent 2px),
+    linear-gradient(rgba(255,255,255,.28) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.28) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  margin: 0 20px;
+
+  pre {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    font-family: 'Menlo', 'Courier New', 'Consola';
+    line-height: 1.0;
+    font-size: 20px;
+  }
+
+  .compare_img {
+    width: 100%;
+    max-width: 450px;
+    margin: 0;
+    display: block;
+    position: relative;
+    float: right;
+  }
+  .header {
+    width: 100%;
+    max-width: 1100px;
+    margin: 50px auto 50px auto;
+    display: block;
+    position: relative;
+    padding: 20px;
+    background: #3f3f3f;
+    color: #EFEFEF;
+    border-radius: 5px;
+  }
+  .header h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 80px;
+    line-height: 1;
+    padding: 0;
+    font-weight: bold;
+    color: #2f2f2f;
+    max-width: 1100px;
+    margin-top: 0px!important;
+    color: #EFEFEF;
+  }
+  .header p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1;
+    padding: 0;
+    font-weight: normal;
+    color: #2f2f2f;
+    max-width: 1100px;
+    color: #EFEFEF;
+  }
+  .header pre {
+    margin-bottom: 0px;
+    font-size: 16px;
+    padding: 10px;
+    background: #1577a2;
+    border: 1px solid #1561BA;
+    color:#EfEfEf;
+  }
+  .modwrap {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    font-family: 'Menlo', 'Courier New', 'Consola';
+    line-height: 1.0;
+    font-size: 7px;
+  }
+
+  .command-box {
+    display: block;
+    position: relative;
+    padding: .5rem 1rem .5rem 1rem;;
+    color: $smoky-white;
+    background: $darker-grey;
+    border: 1px solid $medium-grey;
+    border-radius: 3px;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 1100px;
+  }
+}
+
+.artwork {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &:before, &:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    clear: both;
+    img {
+      max-width: 100%;
+      height: auto;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .port_wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    clear: both;
+  }
+
+  header {
+    color: #fff;
+    text-align: center;
+    padding: 1px 0 100px;
+    @include saw-tooth-vertical(50px, $smoky-white);
+
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 110px;
+      letter-spacing: -3px;
+      line-height: .5;
+      padding-top: 50px;
+      font-family: "Cabin Sketch", sans-serif;
+      span {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 55px;
+        line-height: 1;
+        margin-top: 20px;
+        font-family: "Libre Barcode 128 Text", sans-serif;
+      }
+    }
+    p {
+      padding-top: 30px;
+    }
+  }
+
+  .gallery {
+    padding: 100px 0 300px;
+    position: relative;
+    overflow: hidden;
+    .masonry__item {
+      &:before {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 40%;
+        left: 50%;
+        margin: -14px 0 0 -16px;
+        background: url(data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%0A%09%20id%3D%22svg2%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Asodipodi%3D%22http%3A//sodipodi.sourceforge.net/DTD/sodipodi-0.dtd%22%20xmlns%3Ainkscape%3D%22http%3A//www.inkscape.org/namespaces/inkscape%22%20inkscape%3Aversion%3D%220.48.4%20r9939%22%20sodipodi%3Adocname%3D%22icon-fullscreen.svg%22%0A%09%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20960%20560%22%0A%09%20enable-background%3D%22new%200%200%20960%20560%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Csodipodi%3Anamedview%20%20borderopacity%3D%221%22%20pagecolor%3D%22%23ffffff%22%20bordercolor%3D%22%23666666%22%20objecttolerance%3D%2210%22%20gridtolerance%3D%2210%22%20guidetolerance%3D%2210%22%20showgrid%3D%22false%22%20fit-margin-top%3D%220%22%20fit-margin-left%3D%220%22%20inkscape%3Azoom%3D%227.375%22%20inkscape%3Acx%3D%22-5.1525424%22%20inkscape%3Acy%3D%2216%22%20id%3D%22namedview11%22%20inkscape%3Awindow-x%3D%22-8%22%20inkscape%3Awindow-y%3D%22-8%22%20fit-margin-right%3D%220%22%20inkscape%3Apageopacity%3D%220%22%20fit-margin-bottom%3D%220%22%20inkscape%3Awindow-width%3D%221366%22%20inkscape%3Awindow-height%3D%22706%22%20inkscape%3Awindow-maximized%3D%221%22%20inkscape%3Apageshadow%3D%222%22%20inkscape%3Acurrent-layer%3D%22svg2%22%3E%0A%09%3C/sodipodi%3Anamedview%3E%0A%3Cg%3E%0A%09%3Crect%20x%3D%22220%22%20y%3D%22260%22%20fill%3D%22%23FFFFFF%22%20width%3D%22536%22%20height%3D%2224%22/%3E%0A%3C/g%3E%0A%3Cg%3E%0A%09%3Crect%20x%3D%22476%22%20y%3D%224%22%20fill%3D%22%23FFFFFF%22%20width%3D%2224%22%20height%3D%22556%22/%3E%0A%3C/g%3E%0A%3C/svg%3E%0A) no-repeat;
+        content: "";
+        opacity: 0;
+        z-index: 1;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+      }
+      &:hover:before {
+        top: 50%;
+        opacity: 1;
+      }
+      &:after {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        content: "";
+        opacity: 0;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+      }
+      &:hover:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  .port {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    z-index: 103;
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    border-bottom: 1px solid #d0d0d0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    box-sizing: border-box ;
+    overflow: auto;
+    background-color: $smoky-white;
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, $smoky-white 60%, $lighter-grey 60%);
+
+    .alert {
+      padding: 0.5rem;
+      background: $lighter-grey;
+      color: $darker-grey;
+      line-height: 1;
+      font-weight: bold;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      display: block;
+      clear: both;
+    }
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      position: relative;
+      display: inline-block;
+      margin: 0 auto 1rem auto;
+      padding: 0.6rem;
+      border: 1px solid $medium-grey;
+    }
+
+    h1 {
+      font-size: 3.25rem /* 45/20 */;
+      line-height: 1;
+      padding: 0 0.6rem 0 0.6rem;
+      color: $black;
+      margin-top: 0!important;
+      margin-bottom: 0!important;
+      text-transform: uppercase;
+    }
+    > * {
+      opacity: 0;
+      -webkit-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear;
+      transition: all 0.5s linear;
+    }
+    &.item_open {
+      visibility: visible;
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+    > * {
+      opacity: 1;
+      -webkit-transition-delay: 0.5s;
+      transition-delay: 0.5s;
+    }
+
+    h2 {
+      font-size: 2.25rem /* 45/20 */;
+      line-height: 1;
+      padding: 0 0.6rem;
+      color: $text-grey;
+      text-transform: lowercase;
+      margin-top: 0.5rem!important;
+    }
+
+    .description {
+      padding: 0 1rem 1rem 0.6rem;
+
+      p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: $text-color-secondary;
+        padding-top: 0;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .close {
+    width: 21px;
+    height: 21px;
+    background: url(data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%0A%09%20id%3D%22svg2%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%09%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2021%2021%22%0A%09%20enable-background%3D%22new%200%200%2021%2021%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%20id%3D%22layer1%22%20transform%3D%22translate%280%2C-1031.3622%29%22%3E%0A%09%3Cpath%20id%3D%22path2987%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20d%3D%22M0%2C1031.4l21%2C21%22/%3E%0A%09%3Cpath%20id%3D%22path2989%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20d%3D%22M21%2C1031.4l-21%2C21%22/%3E%0A%3C/g%3E%0A%3C/svg%3E%0A%0A) no-repeat;
+    position: absolute;
+    right: 10px;
+    top: -121px;
+    opacity: 1;
+    z-index: 1004;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .item_open .close {
+    opacity: 1;
+    top: 0px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* helpers/align.css */
+
+  .align {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  /* helpers/art-grid.css */
+
+  .art-grid {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 73.3rem /* 1170/16 */;
+    width: 100%;
+  }
+
+  /* modules/figure.css */
+
+  figure {
+    margin: 0;
+  }
+
+  /* modules/image.css */
+
+  img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  /* vendor/masonry.css */
+
+  .masonry {
+    margin: -3%;
+  }
+
+  .masonry__item {
+    margin: 1.5%;
+    width: 47%;
+  }
+
+  @media (min-width: 30em) {
+    .masonry__item {
+      width: 30.33333%;
+    }
+  }
+
+  @media (min-width: 48em) {
+    .masonry__item {
+      width: 22%;
+    }
+  }
+
+}

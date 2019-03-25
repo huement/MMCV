@@ -11,7 +11,10 @@
 
 set +e
 
-# GLOBALS
+###
+### GLOBALS
+###
+
 MIDDLECMD=''
 A=false
 B=false
@@ -20,24 +23,57 @@ D=false
 E=false
 
 function helpMsg {
+    displayBanner
+    echo "       -----------------------[   COMMANDS   ]------------------------ "
     printf "
+            Run this script with any of the available parameters.
+            For more info please checkout the README.md file.
 
-  BUILD OPTIONS     [M.sh]
- =========================
 
-  -l : Live Reload
+            -l : Live Reload Server (Dev Mode)
 
-  -b : Build Website
+            -b : Build Website (Webpack + HTML)
 
-  -w : Webpack
+            -w : Run the Webpack builder by itself
 
-  -s : S3 Sync
+            -s : Sync files to an Amazon S3 Bucket
 
+            -d : Deploy to Github Pages
 
     "
+
+    echo ""
 }
 
-# Parse Parameters
+function displayBanner {
+    echo "                  __     __     __ __         _______ _______ _______  "
+    echo "       .--------.|__|.--|  |.--|  |  |.-----.|   |   |   _   |    |  | "
+    echo "       |        ||  ||  _  ||  _  |  ||  -__||       |       |       | "
+    echo "       |__|__|__||__||_____||_____|__||_____||__|_|__|___|___|__|____| "
+    echo ""
+}
+
+function finishIt {
+    end=`date +%s`
+    runtime=$((end-start))
+    echo ""
+    echo "       middleMAN Command Finished!       "
+    echo ""
+    echo "       --------------------------------"
+    echo ""
+    echo "       Finished Size: $(du -sh ./build)"
+    echo "          Total Time:  ${runtime}        Seconds"
+    echo ""
+    echo ""
+}
+
+
+###
+### Parse Parameters
+###
+
+start=`date +%s`
+
 for ARG in "$@"; do
     case $ARG in
         -l|--live)
@@ -61,33 +97,34 @@ for ARG in "$@"; do
     esac
 done
 
+
 ###
 ### EXECUTE ANY FOUND OPTION(S)
 ###
 
 if [ "$A" = true ]; then
-    MIDDLECMD='NO_CONTRACTS=true bundle exec middleman server'
-    MIDMSG='MIDDLEMAN LIVE RELOAD'
+    MIDDLECMD='NO_CONTRACTS=true bundle exec middleman server --verbose'
+    MIDMSG='LIVE RELOAD'
 fi
 
 if [ "$B" = true ]; then
-    MIDDLECMD='bundle exec middleman build'
-    MIDMSG='MIDDLEMAN BUILD'
+    MIDDLECMD='bundle exec middleman build && ./_makeWebP.js'
+    MIDMSG='BUILD SITE'
 fi
 
 if [ "$C" = true ]; then
     MIDDLECMD='BUILD_DEVELOPMENT=1 ./node_modules/webpack/bin/webpack.js --watch -d --progress --color'
-    MIDMSG='NODE.JS WEBPACK'
+    MIDMSG='NODE.JS -> WEBPACK'
 fi
 
 if [ "$D" = true ]; then
-    MIDDLECMD='middleman s3_sync'
+    MIDDLECMD='bundle exec middleman s3_sync'
     MIDMSG='BUILD & S3 SYNC'
 fi
 
 if [ "$E" = true ]; then
-    MIDDLECMD='middleman deploy'
-    MIDMSG='BUILD & DEPLOY'
+    MIDDLECMD='bundle exec middleman deploy'
+    MIDMSG='DEPLOY SITE'
 fi
 
 if [ "$A" = false ] && [ "$B" = false ] && [ "$C" = false ] && [ "$D" = false ] && [ "$E" = false ]; then
@@ -95,12 +132,8 @@ if [ "$A" = false ] && [ "$B" = false ] && [ "$C" = false ] && [ "$D" = false ] 
     helpMsg
 else
     echo ""
-    echo "                  __     __     __ __         _______ _______ _______  "
-    echo "       .--------.|__|.--|  |.--|  |  |.-----.|   |   |   _   |    |  | "
-    echo "       |        ||  ||  _  ||  _  |  ||  -__||       |       |       | "
-    echo "       |__|__|__||__||_____||_____|__||_____||__|_|__|___|___|__|____| "
-    echo ""
-    echo "       --------------------------[BUILDER]---------------------------- "
+    displayBanner
+    echo "       -----------------------[RESUME BUILDER]------------------------ "
     echo ""
     echo ""
     echo "        RUN COMMAND: ${MIDMSG}"
@@ -108,12 +141,11 @@ else
     echo ""
 fi
 
+
+###
+### RUN CHOSEN COMMAND
+###
+
 eval "$MIDDLECMD"
 
-# if [ "$B" = true ] || [ "$D" = true ]; then
-#     BUILDCMD='rm -R build/assets/stylesheets/bulma; rm -R build/source; rm -R build/pagemd; rm build/.editorconfig'
-#     eval "$BUILDCMD"
-#     echo ""
-#     echo "Clean Up Completed!"
-#     echo ""
-# fi
+finishIt

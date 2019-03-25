@@ -19,7 +19,7 @@
 		"shortdesc": "Job Title",
 		"email": "derek@huement.com",
 		"phone": "(701)-770-3428",
-		"homepage": "https://huement.com/",
+		"homepage": "https://huement.github.io/MMCV/",
 		"github": "https://github.com/johnny13",
 		"linkedin": "http://linkedin/derekscott13",
 		"twitter": "http://twitter.com/huement",
@@ -190,7 +190,7 @@
     {
       "label" : "Style Guide Starter",
       "thumb" : "styleguide_thumb.jpg",
-      "link"  : "styleguide.ai.zip"
+      "link"  : "images/styleguide.ai.zip"
     },
     {
       "label" : "ASCII ART",
@@ -206,12 +206,12 @@
     {
       "label" : "Rainbow Lips",
       "thumb" : "immbackground_thumb.jpg",
-      "link"  : "/images/immbackground.jpg"
+      "link"  : "artwork.html"
     },
     {
       "label" : "Duotone was for Lovers",
       "thumb" : "duotone_thumb.jpg",
-      "link"  : "duotone.jpg"
+      "link"  : "frankieshaw.html"
     }
   ]
 }

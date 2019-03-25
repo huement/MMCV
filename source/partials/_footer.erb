@@ -1,10 +1,19 @@
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
 
+<!-- jQuery Library -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+ 
 <!-- Gradient Animations -->
 <%= javascript_include_tag 'granim' %>
 
-<!-- Gradient Animations -->
-<%= javascript_include_tag 'jqcloud' %>
+<% if current_page.path == "index.html" %>
+  <!-- Word Cloud -->
+  <%= javascript_include_tag 'jqcloud' %>
+<% end %>
+
+<% if current_page.path == "artwork.html" %>
+  <script type="text/javascript" src="//unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+  <script type="text/javascript" src="//unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+<% end %>
 
 <!--  Application  Code  -->
 <%= javascript_include_tag 'code' %>

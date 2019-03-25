@@ -1,16 +1,23 @@
-///     ________         __     ______              __
-///    |  |  |  |.-----.|  |--.|   __ \.---.-.----.|  |--.
-///    |  |  |  ||  -__||  _  ||    __/|  _  |  __||    <
-///    |________||_____||_____||___|   |___._|____||__|__|
-///    ---------------------------------------------------
+///
+///    ------------------------------------------------------------------------------
+///    |  .::    .   .:.,:::::: :::::::.::::::::::. :::.      .,-:::::  :::  .      |
+///    |  ';;,  ;;  ;;;;;;;''''  ;;;'';;'`;;;```.;;;;;`;;   ,;;;'````'  ;;; .;;,.   |
+///    |   '[[, [[, [[' [[cccc   [[[__[[\.`]]nnn]]',[[ '[[, [[[         [[[[[/'     |
+///    |     Y$c$$$c$P  $$""""   $$""""Y$$ $$$""  c$$$cc$$$c$$$        _$$$$,       |
+///    |      "88"888   888oo,___88o,,od8P 888o    888   888`88bo,__,o,"888"88o,    |
+///    |       "M "M"   """"YUMM""YUMMMP"  YMMMb   YMM   ""`  "YUMMMMMP"MMM "MMP"   |
+///    ------------------------------------------------------------------------------
 ///
 
+// NODE.JS PACKAGES
 const webpack = require('webpack');
 const path = require('path');
 const resolve = require('path').resolve;
-//onst ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+// INSTALLED PACKAGES
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 
 module.exports = {
 
@@ -72,6 +79,7 @@ module.exports = {
             }
         ]
     },
+
     plugins: [
         // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
         // inside your code for any environment checks; UglifyJS will automatically
@@ -88,6 +96,7 @@ module.exports = {
             chunkFilename: "./build/style/[id].css"
         })
     ]
+
 };
 
 // Load SASS Vars from JSON file
