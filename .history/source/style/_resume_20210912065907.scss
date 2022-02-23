@@ -10,6 +10,7 @@
   z-index: 1;
 }
 
+
 // -------------------- [ HEADER ]
 
 .main-title {
@@ -20,35 +21,36 @@
   line-height: 1;
   padding: 0;
   span {
-    color: #fff;
-    font-family: "Fredoka One", sans-serif;
-    text-shadow: 0.25rem -0.25rem rgba($red, 0.75),
-      -0.25rem -0.25rem rgba($blue, 0.75), 0 0.5rem rgba($green, 0.75);
+    color: #FFF;
+    font-family: 'Fredoka One', sans-serif;
+    text-shadow:  0.25rem -0.25rem rgba($red, 0.75),
+                 -0.25rem -0.25rem rgba($blue, 0.75),
+                  0        0.5rem  rgba($green, 0.75);
   }
 }
 
 .main-title.titlecol {
-  width: 100%;
-  margin: 2rem auto -1rem auto;
-  text-align: center;
+	width: 100%;
+	margin: 2rem auto -1rem auto;
+	text-align: center;
   letter-spacing: -1px;
-  span {
-    text-transform: uppercase;
-    line-height: 1;
-    @include responsive-font-size(50px);
+	span{
+		text-transform: uppercase;
+		line-height: 1;
+		@include responsive-font-size(50px);
     letter-spacing: -10px;
-  }
+	}
 }
 
 .main-sub-title.titlecol {
-  width: 100%;
-  margin: 0.75rem auto -1rem auto;
-  text-align: center;
-  span {
-    text-transform: uppercase;
-    line-height: 1;
-    @include responsive-font-size(20px);
-  }
+	width: 100%;
+	margin: 0.75rem auto -1rem auto;
+	text-align: center;
+	span{
+		text-transform: uppercase;
+		line-height: 1;
+		@include responsive-font-size(20px);
+	}
 }
 
 .main-sub-title {
@@ -59,13 +61,15 @@
   color: $violet;
 }
 
+
+
 // -------------------- [ SIDEKICK ]
 
 .sidekick {
   ul {
     list-style-type: none;
-    margin-left: 0 !important;
-    padding-inline-start: 0 !important;
+    margin-left: 0!important;
+    padding-inline-start: 0!important;
 
     li {
       list-style-type: none;
@@ -85,6 +89,7 @@
   }
 
   .interests-list {
+
     li {
       height: auto;
       @include responsive-font-size(1.2rem);
@@ -93,10 +98,11 @@
 
   .skills.section.not-printable,
   .skills.section.printable {
-    display: none !important;
+    display: none!important;
   }
 
   .references-list {
+
     .peep-peep {
       margin-bottom: 2rem;
     }
@@ -149,12 +155,12 @@
   background-color: $smoky-white;
   color: $text-color-secondary;
   padding: 0;
-  -webkit-border-top-left-radius: 10px;
-  -webkit-border-bottom-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  -moz-border-radius-bottomleft: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  -webkit-border-top-left-radius: 1px;
+  -webkit-border-bottom-left-radius: 1px;
+  -moz-border-radius-topleft: 1px;
+  -moz-border-radius-bottomleft: 1px;
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
 
   .inside {
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -162,19 +168,20 @@
 }
 
 #download_swoosh {
-  &:after {
-    content: "";
-    position: relative;
-    display: block;
-    margin: -25px auto -115px auto;
-    background: $blue;
-    width: 100%;
-    height: 75px;
-    -webkit-transform: skewY(3deg);
-    -ms-transform: skewY(3deg);
-    transform: skewY(3deg);
-    z-index: 1;
-  }
+
+    &:after {
+      content: '';
+      position: relative;
+      display: block;
+      margin: -25px auto -115px auto;
+      background: $blue;
+      width: 100%;
+      height: 75px;
+      -webkit-transform: skewY(3deg);
+      -ms-transform: skewY(3deg);
+      transform: skewY(3deg);
+      z-index: 1;
+    }
 }
 
 .cdownl {
@@ -188,7 +195,7 @@
   padding: 0;
   text-decoration: none;
   z-index: 3;
-  color: $smoky-white !important;
+  color: $smoky-white!important;
 
   .fa {
     margin-bottom: -10px;
@@ -196,15 +203,15 @@
 }
 
 .interests-container {
-  margin: 0px auto 0 auto;
+  margin: 25px auto 0 auto;
 
   .sidebar-title {
-    margin-top: 0 !important;
-    margin-bottom: -2rem !important;
+    margin-top: 0!important;
+    margin-bottom: -2rem!important;
   }
 
   #keywords {
-    margin: 30px auto 0 auto;
+    margin: 0 auto 0 auto;
     height: 260px;
     display: block;
     position: relative;
@@ -224,15 +231,16 @@
   position: relative;
 }
 
+
 .profile {
   background: #3f3f3f;
 
   .avatar {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -40px 10%;
-    //background: no-repeat top center / cover;
-    // clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+    background-position: 0 20%;
+  	//background: no-repeat top center / cover;
+  	// clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
     width: 100%;
     height: 300px;
   }
@@ -257,10 +265,11 @@
       text-align: right;
     }
   }
+
 }
 
 .contact-container {
-  padding: 10px 0 0.5rem 0 !important;
+  padding: 10px 0 0.50rem 0!important;
   margin: -1.2rem auto 1.5rem auto;
 
   // &:after {
@@ -276,41 +285,25 @@
   // }
 
   &:before {
-    content: "";
+    content: '';
     position: relative;
     display: block;
-    margin: -10px auto -30px auto;
+    margin: -2px auto -70px auto;
     background: $green;
     width: 100%;
-    height: 80px;
-    -webkit-transform: skewY(-8deg);
-    -ms-transform: skewY(-8deg);
-    transform: skewY(-8deg);
-    z-index: 0;
+    height: 75px;
+    -webkit-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    transform: skewY(-3deg);
+    z-index: 1;
   }
 
-  &:after {
-    content: "";
-    position: relative;
-    display: block;
-    margin: -30px auto 30px auto;
-    background: $green;
-    width: 100%;
-    height: 60px;
-    -webkit-transform: skewY(-8deg);
-    -ms-transform: skewY(-8deg);
-    transform: skewY(-8deg);
-    z-index: 0;
-  }
-
-  .fa,
-  .fas,
-  .fab {
+  .fa, .fas, .fab {
     color: $smoky-white;
-    transition: all 0.2s ease;
+    transition: all .2s ease;
     margin: 0.1rem;
     z-index: 3;
-    font-size: 1.8rem !important;
+    font-size: 1.8rem!important;
 
     &:hover {
       color: $text-color-secondary;
@@ -329,63 +322,10 @@
     li {
       padding: 10px 0.25rem 0.25rem 0.25rem;
       @include responsive-font-size(1.2rem);
-      transition: all 0.2s ease;
+      transition: all .2s ease;
 
-      &:hover,
-      .fa-2x:hover {
+      &:hover, .fa-2x:hover {
         cursor: pointer;
-      }
-    }
-  }
-
-  .contactList {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: block;
-    background: $green;
-    position: relative;
-
-    li {
-      clear: both;
-      display: block;
-      position: relative;
-      width: 100%;
-      padding: 1rem 0.25rem;
-      margin: 0 auto;
-
-      a {
-        text-decoration: none;
-        color: $text-color;
-        font-weight: bold;
-        text-align: left;
-        padding-left: 0.5rem;
-        display: flex;
-        align-items: center;
-
-        .deets {
-          display: inline-block;
-          vertical-align: middle;
-          padding-left: 0.25rem;
-        }
-
-        .deetsicon {
-          align-items: center;
-          display: inline-flex;
-          justify-content: center;
-          height: 1.5rem;
-          width: 1.5rem;
-          margin-right: 10px;
-          margin-left: 15px;
-        }
-
-        .fa {
-          margin-bottom: 10px 0 0 0;
-        }
-
-        &:hover {
-          color: $text-grey;
-        }
       }
     }
   }
@@ -404,34 +344,29 @@
   }
 }
 
+
+
 // -------------------- [ SUPERHERO ]
 
 .superhero {
-  border-left: 1px solid #d3d4d4;
+  border-left: 1px solid #D3D4D4;
   background: $white;
   padding: 1rem 3rem 0.5rem 3.25rem;
-  -webkit-border-radius: 10px;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius: 10px;
-  -moz-border-radius-topleft: 0;
-  border-radius: 10px;
-  border-top-left-radius: 0;
 
   a {
-    text-decoration: none !important;
+    text-decoration: none!important;
   }
 
   .section-title {
     line-height: 1;
-    padding: 0 0 0.5rem 0;
+    padding: 0 0 .5rem 0;
     margin: 3rem 0 2.5rem 0;
-    color: $medium-grey !important;
+    color: $medium-grey!important;
     text-align: center;
 
-    .fa,
-    .fas {
+    .fa, .fas {
       margin-right: 1rem;
-      color: $medium-grey !important;
+      color: $medium-grey!important;
       @include responsive-font-size(2rem);
       margin-top: -10px;
     }
@@ -445,12 +380,11 @@
     line-height: 1;
     padding: 0 0 0.25rem 0;
     margin: 6rem 0 0.5rem 0;
-    color: $medium-grey !important;
+    color: $medium-grey!important;
     text-align: center;
     text-transform: uppercase;
 
-    .fas,
-    .fa {
+    .fas, .fa {
       @include responsive-font-size(2rem);
     }
   }
@@ -496,6 +430,7 @@
 }
 
 .experiences {
+
   .item {
     margin-bottom: 3rem;
   }
@@ -539,8 +474,7 @@
 
 .skills {
   // Progress Bars
-  progress,
-  progress[role] {
+  progress, progress[role] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -566,7 +500,7 @@
     h3 {
       color: #fff;
       margin-left: 0.25rem;
-      left: 0.5rem;
+      left: .5rem;
       line-height: 1;
       position: absolute;
       top: 0rem;
@@ -582,229 +516,85 @@
   // Style the bar colors
   .skill-0::-webkit-progress-value {
     background: $red;
-    background: -webkit-linear-gradient(
-      -90deg,
-      darken($red, 10),
-      darken($red, 5),
-      $red,
-      lighten($red, 5)
-    );
-    background: linear-gradient(
-      -90deg,
-      darken($red, 10),
-      darken($red, 5),
-      $red,
-      lighten($red, 5)
-    );
+    background: -webkit-linear-gradient(-90deg, darken($red,10), darken($red,5), $red, lighten($red, 5));
+    background: linear-gradient(-90deg, darken($red,10), darken($red,5), $red, lighten($red, 5));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken($red,30)', endColorstr='$red',GradientType=0 ); /* IE6-9 */
   }
 
   .skill-0::-moz-progress-bar {
     background: $red;
-    background: -webkit-linear-gradient(
-      -90deg,
-      darken($red, 10),
-      darken($red, 5),
-      $red,
-      lighten($red, 5)
-    );
-    background: linear-gradient(
-      -90deg,
-      darken($red, 10),
-      darken($red, 5),
-      $red,
-      lighten($red, 5)
-    );
+    background: -webkit-linear-gradient(-90deg, darken($red,10), darken($red,5), $red, lighten($red, 5));
+    background: linear-gradient(-90deg, darken($red,10), darken($red,5), $red, lighten($red, 5));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken($red,20)', endColorstr='$red',GradientType=0 ); /* IE6-9 */
   }
 
   .skill-1::-webkit-progress-value {
     background: $orange;
-    background: -webkit-linear-gradient(
-      -90deg,
-      darken($orange, 10),
-      darken($orange, 5),
-      $orange,
-      lighten($orange, 5)
-    );
-    background: linear-gradient(
-      -90deg,
-      darken($orange, 10),
-      darken($orange, 5),
-      $orange,
-      lighten($orange, 5)
-    );
+    background: -webkit-linear-gradient(-90deg, darken($orange,10), darken($orange,5), $orange, lighten($orange, 5));
+    background: linear-gradient(-90deg, darken($orange,10), darken($orange,5), $orange, lighten($orange, 5));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken($orange,20)', endColorstr='$orange',GradientType=0 ); /* IE6-9 */
   }
 
   .skill-1::-moz-progress-bar {
     background: $orange;
-    background: -webkit-linear-gradient(
-      -90deg,
-      darken($orange, 10),
-      darken($orange, 5),
-      $orange,
-      lighten($orange, 5)
-    );
-    background: linear-gradient(
-      -90deg,
-      darken($orange, 10),
-      darken($orange, 5),
-      $orange,
-      lighten($orange, 5)
-    );
+    background: -webkit-linear-gradient(-90deg, darken($orange,10), darken($orange,5), $orange, lighten($orange, 5));
+    background: linear-gradient(-90deg, darken($orange,10), darken($orange,5), $orange, lighten($orange, 5));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken($orange,20)', endColorstr='$orange',GradientType=0 ); /* IE6-9 */
   }
 
   .skill-2::-webkit-progress-value {
     background: $yellow;
-    background: -webkit-linear-gradient(
-      -90deg,
-      darken($yellow, 10),
-      darken($yellow, 5),
-      $yellow,
-      lighten($yellow, 5)
-    );
-    background: linear-gradient(
-      -90deg,
-      darken($yellow, 10),
-      darken($yellow, 5),
-      $yellow,
-      lighten($yellow, 5)
-    );
+    background: -webkit-linear-gradient(-90deg, darken($yellow,10), darken($yellow,5), $yellow, lighten($yellow, 5));
+    background: linear-gradient(-90deg, darken($yellow,10), darken($yellow,5), $yellow, lighten($yellow, 5));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken($yellow,20)', endColorstr='$yellow',GradientType=0 ); /* IE6-9 */
   }
 
   .skill-2::-moz-progress-bar {
     background: $yellow;
-    background: -webkit-linear-gradient(
-      -90deg,
-      darken($yellow, 10),
-      darken($yellow, 5),
-      $yellow,
-      lighten($yellow, 5)
-    );
-    background: linear-gradient(
-      -90deg,
-      darken($yellow, 10),
-      darken($yellow, 5),
-      $yellow,
-      lighten($yellow, 5)
-    );
+    background: -webkit-linear-gradient(-90deg, darken($yellow,10), darken($yellow,5), $yellow, lighten($yellow, 5));
+    background: linear-gradient(-90deg, darken($yellow,10), darken($yellow,5), $yellow, lighten($yellow, 5));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken($yellow,20)', endColorstr='$yellow',GradientType=0 ); /* IE6-9 */
   }
 
   .skill-3::-webkit-progress-value {
     background: $green;
-    background: -webkit-linear-gradient(
-      -90deg,
-      darken($green, 10),
-      darken($green, 5),
-      $green,
-      lighten($green, 5)
-    );
-    background: linear-gradient(
-      -90deg,
-      darken($green, 10),
-      darken($green, 5),
-      $green,
-      lighten($green, 5)
-    );
+    background: -webkit-linear-gradient(-90deg, darken($green,10), darken($green,5), $green, lighten($green, 5));
+    background: linear-gradient(-90deg, darken($green,10), darken($green,5), $green, lighten($green, 5));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken($green,20)', endColorstr='$green',GradientType=0 ); /* IE6-9 */
   }
 
   .skill-3::-moz-progress-bar {
     background: $green;
-    background: -webkit-linear-gradient(
-      -90deg,
-      darken($green, 10),
-      darken($green, 5),
-      $green,
-      lighten($green, 5)
-    );
-    background: linear-gradient(
-      -90deg,
-      darken($green, 10),
-      darken($green, 5),
-      $green,
-      lighten($green, 5)
-    );
+    background: -webkit-linear-gradient(-90deg, darken($green,10), darken($green,5), $green, lighten($green, 5));
+    background: linear-gradient(-90deg, darken($green,10), darken($green,5), $green, lighten($green, 5));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken($green,20)', endColorstr='$green',GradientType=0 ); /* IE6-9 */
   }
 
   .skill-4::-webkit-progress-value {
     background: $blue;
-    background: -webkit-linear-gradient(
-      -90deg,
-      darken($blue, 10),
-      darken($blue, 5),
-      $blue,
-      lighten($blue, 5)
-    );
-    background: linear-gradient(
-      -90deg,
-      darken($blue, 10),
-      darken($blue, 5),
-      $blue,
-      lighten($blue, 5)
-    );
+    background: -webkit-linear-gradient(-90deg, darken($blue,10), darken($blue,5), $blue, lighten($blue, 5));
+    background: linear-gradient(-90deg, darken($blue,10), darken($blue,5), $blue, lighten($blue, 5));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken($blue,20)', endColorstr='$blue',GradientType=0 );
   }
 
   .skill-4::-moz-progress-bar {
     background: $blue;
-    background: -webkit-linear-gradient(
-      -90deg,
-      darken($blue, 10),
-      darken($blue, 5),
-      $blue,
-      lighten($blue, 5)
-    );
-    background: linear-gradient(
-      -90deg,
-      darken($blue, 10),
-      darken($blue, 5),
-      $blue,
-      lighten($blue, 5)
-    );
+    background: -webkit-linear-gradient(-90deg, darken($blue,10), darken($blue,5), $blue, lighten($blue, 5));
+    background: linear-gradient(-90deg, darken($blue,10), darken($blue,5), $blue, lighten($blue, 5));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken($blue,20)', endColorstr='$blue',GradientType=0 );
   }
 
   .skill-5::-webkit-progress-value {
     background: $violet;
-    background: -webkit-linear-gradient(
-      -90deg,
-      darken($violet, 10),
-      darken($violet, 5),
-      $violet,
-      lighten($violet, 5)
-    );
-    background: linear-gradient(
-      -90deg,
-      darken($violet, 10),
-      darken($violet, 5),
-      $violet,
-      lighten($violet, 5)
-    );
+    background: -webkit-linear-gradient(-90deg, darken($violet,10), darken($violet,5), $violet, lighten($violet, 5));
+    background: linear-gradient(-90deg, darken($violet,10), darken($violet,5), $violet, lighten($violet, 5));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken($violet,20)', endColorstr='$violet',GradientType=0 );
   }
 
   .skill-5::-moz-progress-bar {
     background: $violet;
-    background: -webkit-linear-gradient(
-      -90deg,
-      darken($violet, 10),
-      darken($violet, 5),
-      $violet,
-      lighten($violet, 5)
-    );
-    background: linear-gradient(
-      -90deg,
-      darken($violet, 10),
-      darken($violet, 5),
-      $violet,
-      lighten($violet, 5)
-    );
+    background: -webkit-linear-gradient(-90deg, darken($violet,10), darken($violet,5), $violet, lighten($violet, 5));
+    background: linear-gradient(-90deg, darken($violet,10), darken($violet,5), $violet, lighten($violet, 5));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken($violet,20)', endColorstr='$violet',GradientType=0 );
   }
 
@@ -822,27 +612,25 @@
   .skill-5::-moz-progress-bar,
   ::-webkit-progress-value {
     -webkit-animation: Gradient 5s ease infinite;
-    -moz-animation: Gradient 5s ease infinite;
-    animation: Gradient 5s ease infinite;
+	  -moz-animation: Gradient 5s ease infinite;
+	  animation: Gradient 5s ease infinite;
   }
 
   // Animation Keyframes
   @-webkit-keyframes bar-fill {
-    0% {
-      width: 0;
-    }
+    0% { width: 0; }
   }
 
   @-moz-keyframes Gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  	0% {
+  		background-position: 0% 50%
+  	}
+  	50% {
+  		background-position: 100% 50%
+  	}
+  	100% {
+  		background-position: 0% 50%
+  	}
   }
 }
 
@@ -850,13 +638,14 @@
   margin-top: 0.5rem;
 }
 
+
 // Portfolio
 
 .subtitle-aside {
   font-weight: bold;
   font-size: 1.25rem;
-  margin: 0 !important;
-  padding: 0 0 30px 0 !important;
+  margin: 0!important;
+  padding: 0 0 30px 0!important;
   line-height: 1;
 }
 
@@ -870,18 +659,17 @@
   max-height: 350px;
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 
   &:hover {
     opacity: 1;
     -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+	  filter: grayscale(100%);
   }
 }
 
-.port_link,
-.port_wrapper {
+.port_link, .port_wrapper {
   margin-bottom: 2rem;
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -894,8 +682,7 @@
   transform: scale(1.2);
 }
 
-.port_link,
-.port_piece {
+.port_link, .port_piece {
   //display: flex;
   overflow: hidden;
   max-height: 200px;
@@ -918,23 +705,23 @@
 // Skill List
 
 .skillset {
-  .item {
-    margin-bottom: 15px;
-    overflow: hidden;
-  }
-  .level-title {
-    @include responsive-font-size(0.9rem);
-    margin-top: 0;
-    margin-bottom: 12px;
-  }
-  .level-bar {
-    height: 12px;
-    background: $smoky-white;
-  }
-  .level-bar-inner {
-    height: 12px;
-    background: lighten($theme-color, 15%);
-  }
+    .item {
+        margin-bottom: 15px;
+        overflow: hidden;
+    }
+    .level-title {
+        @include responsive-font-size(0.9rem);
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+    .level-bar {
+        height: 12px;
+        background: $smoky-white;
+    }
+    .level-bar-inner {
+        height: 12px;
+        background: lighten($theme-color, 15%);
+    }
 }
 
 .edu-section {
@@ -951,7 +738,7 @@
     display: block;
     position: relative;
 
-    span.degree {
+     span.degree {
       width: 100%;
       display: block;
       position: relative;
@@ -959,13 +746,13 @@
       padding: 0;
       font-weight: normal;
       @include responsive-font-size(1.4rem);
-    }
+     }
 
-    span.footnote.gpa {
-      float: right;
-      padding-right: 1rem;
-      padding-top: 0.5rem;
-    }
+     span.footnote.gpa {
+       float: right;
+       padding-right: 1rem;
+       padding-top: 0.5rem;
+     }
   }
 
   .item-subtitle {
@@ -982,7 +769,7 @@
     width: 100%;
     display: block;
     position: relative;
-    transition: 0.3s ease-in-out;
+  	transition: .3s ease-in-out;
 
     &:hover {
       color: $medium-grey;
@@ -998,13 +785,14 @@
     margin: 0 auto;
     filter: grayscale(0);
     -webkit-filter: grayscale(0);
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+  	transition: all .3s ease-in-out;
 
     &:hover {
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
     }
+
   }
 
   .project-tagline {
@@ -1016,67 +804,66 @@
   }
 
   .demo-2 {
-    position: relative;
-    width: 100%;
-    height: 215px;
-    overflow: hidden;
-    background-color: #ffffff;
-    list-style-type: none;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    margin: 0;
-    padding-inline-start: 0;
-
-    .effect img {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      cursor: pointer;
-      margin: 0;
-      -webkit-transition: bottom 0.3s ease-in-out;
-      -moz-transition: bottom 0.3s ease-in-out;
-      -o-transition: bottom 0.3s ease-in-out;
-      transition: bottom 0.3s ease-in-out;
-    }
-
-    &:hover {
-      .effect img:hover {
-        bottom: -60px;
-      }
-    }
-
-    li {
+      position: relative;
+      width: 100%;
+      height: 215px;
+      overflow: hidden;
+      background-color: #FFFFFF;
       list-style-type: none;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+      margin: 0;
+      padding-inline-start: 0;
 
-      img {
-        display: block;
-        position: relative;
-        margin: 0 auto;
+      .effect img {
+          position:absolute;
+          left:0;
+          bottom:0;
+          cursor:pointer;
+          margin: 0;
+          -webkit-transition:bottom .3s ease-in-out;
+          -moz-transition:bottom .3s ease-in-out;
+          -o-transition:bottom .3s ease-in-out;
+          transition:bottom .3s ease-in-out
       }
-    }
+
+      &:hover {
+        .effect img:hover {
+            bottom:-60px
+        }
+      }
+
+      li {
+        list-style-type: none;
+
+        img {
+          display: block;
+          position: relative;
+          margin: 0 auto;
+        }
+      }
   }
 
-  .demo-2 p,
-  .demo-2 h2 {
-    color: #fff;
-    padding: 10px;
-    left: -20px;
-    top: 20px;
-    position: relative;
+  .demo-2 p,.demo-2 h2 {
+      color:#fff;
+      padding:10px;
+      left:-20px;
+      top:20px;
+      position:relative
   }
   .demo-2 p {
-    font-family: "Lato";
-    font-size: 12px;
-    line-height: 18px;
-    margin: 0;
+      font-family:'Lato';
+      font-size:12px;
+      line-height:18px;
+      margin:0
   }
   .demo-2 h2 {
-    font-size: 20px;
-    line-height: 24px;
-    margin: 0;
-    font-family: "Lato";
+      font-size:20px;
+      line-height:24px;
+      margin:0;
+      font-family:'Lato'
   }
 
   .img-block {
@@ -1094,10 +881,9 @@
     background: #000;
   }
 
-  h2.zero,
-  p.zero {
-    margin: 0;
-    padding: 0;
+  h2.zero,p.zero {
+      margin:0;
+      padding:0
   }
 }
 

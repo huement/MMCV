@@ -1,0 +1,217 @@
+{
+	"headers": {
+		"profile": "Profile",
+		"skills": "Technical Focus",
+		"portfolio": "Portfolio",
+		"techs": "Technical",
+		"jobs": "Work History",
+		"education": "Education",
+		"links": "Links",
+		"download": "Download PDF",
+		"age": "Level",
+		"projects": "Open Source Projects",
+		"interests": "Interests",
+		"references": "References"
+	},
+	"info": {
+		"myname": "Derek Scott",
+		"dob": "1985-01-15T00:00:00.000Z",
+		"shortdesc": "Job Title",
+		"email": "derek@huement.com",
+		"phone": "(701)-770-3428",
+		"homepage": "https://huement.github.io/MMCV/",
+		"github": "https://github.com/johnny13",
+		"linkedin": "http://linkedin/derekscott13",
+		"twitter": "http://twitter.com/huement",
+		"address": {
+			"street": "120 8th Street North",
+			"city": "Fargo",
+			"postal_code": 58102
+		},
+		"desc": "Prototype to production, I make napkin art real!"
+	},
+	"skills": [
+		{
+			"name": "Web design",
+			"desc": "Assertively exploit wireless initiatives rather than synergistic core competencies."
+		},
+		{
+			"name": "Interface Design",
+			"desc": "Credibly streamline mission-critical value with multifunctional functionalities."
+		},
+		{
+			"name": "Project Direction",
+			"desc": "Proven ability to lead and manage a wide variety of design and development projects in team and independent situations."
+		}
+	],
+  "references": [
+    {
+      "name"  : "Punky Ditsworth",
+      "phone" : "701-572-1200",
+      "title" : "Personal Reference",
+      "icon"  : "caticorn.png"
+    },
+    {
+      "name"  : "Craig Miwa",
+      "phone" : "701-572-4568",
+      "title" : "freshLime.com CTO",
+      "icon"  : "freshlime.png"
+    },
+    {
+      "name"  : "Jim JoeJack",
+      "phone" : "701-572-9892",
+      "title" : "Synergistic manager",
+      "icon"  : "pumpkinman.png"
+    }
+  ],
+  "download" : { "link" : "#", "label" : "Print Version" },
+	"languages": [
+		{
+			"name": "Javascript",
+      "level": "88",
+      "label": "React,Angular,Typescript"
+		},
+		{
+			"name": "PHP 5-7",
+      "level": "75",
+      "label": "Wordpress,Laravel,Silex"
+		},
+    {
+			"name": "Stylesheets",
+      "level": "85",
+      "label": "SCSS,SASS,PostCSS"
+		},
+    {
+      "name": "Ruby",
+      "level": "55",
+      "label": "Docker,Middleman"
+    },
+    {
+      "name": "Bash",
+      "level": "65",
+      "label": "Linux,Sys Admin"
+    }
+	],
+	"jobs": [
+		{
+			"title": "Full Stack Web Developer",
+			"company": "Myriad Mobile",
+			"url": "https://myriadmobile.com/",
+      "time": "Sept 2016 - Oct 2018",
+			"desc": "Built and maintained company Wordpress sites. Worked in small teams to design and build both public and private customer web apps. Performed various full stack jobs, working with both front and back end libraries, including ReactJS, AngularJS, PHP 7, Docker, Vagrant, Ruby, Bulma, and a few others."
+		},
+		{
+			"title": "Front End / Mobile Developer",
+			"company": "RealTruck",
+      "url": "https://realtruck.com/",
+      "time": "Oct 2014 - Jan 2016",
+			"desc": "Revamped both the mobile and desktop websites. Completed a team wide push to modernize the legacy codebase. Tasks also included adding new functionality and designs, with a focus on updating build tools and asset pipelines to reduces page load times and increase security."
+		},
+    {
+      "title": "Front End / iOS Developer",
+      "company": "freshLime",
+      "url": "https://freshlime.com/",
+      "time": "Sept 2013 - Aug 2016",
+      "desc": "Starting with basic concept art, built out and programmed a complex web revolving around in-home service industry professionals. Published an iOS mobile app using AngularJS and Cordova. Integrated multiple payment providers on web and mobile platforms."
+    }
+	],
+	"education": [
+		{
+			"name": "University of North Dakota",
+			"url": "http://und.edu",
+			"city": "Grand Forks",
+			"region": "North Dakota",
+			"country": "USA",
+			"degree": "Bachelor of Science",
+			"focus": "Psychology",
+			"grade": "3.3 GPA",
+      "study": "Studied a number of industiral and organizational psychology topics. With a strong focus in opperant conditioning, behavioral designs, and color theory.\n&nbsp;&nbsp;\n\nAssisted in conducting focus groups and studies based around perseption and learning patterns."
+		},
+    {
+      "name": "University of North Dakota",
+      "url": "http://und.edu",
+      "city": "Grand Forks",
+      "region": "North Dakota",
+      "country": "USA",
+      "degree": "Bachelor of Arts",
+      "focus": "Economics",
+      "grade": "3.1 GPA",
+      "study": "Focused on macroeconomic principals, consumer buying patterns, and mathmatical game theory. Applied formulas to create complex mathmatical models which attempted to predict future buying habits."
+    }
+	],
+	"projects": [
+		{
+			"name" : "Conjure",
+			"desc" : "Wordpress Conjure is a modified version of Sage 9 that has been updated to include real world addons and improvements you will use in your everday development.\n",
+			"url"  : "https://github.com/huement/conjure",
+      "img"  : "conjure-logo.png",
+      "extra": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+		},
+    {
+      "name" : "WebCraft",
+      "desc" : "Build out complex static HTML based projects with this [Middleman](https://middlemanapp.com/) ver 4+ starter kit\n",
+      "url"  : "https://github.com/huement/webcraft",
+      "img"  : "webcraft-logo.png",
+      "extra": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "name" : "Mage",
+      "desc" : "A set of CLI based tools. Inlcuding bash scripts, CLI apps, and terminal shortcuts that allow for ease of development and every day administration tasks.\n",
+      "url"  : "https://github.com/huement/mage",
+      "img"  : "mage-logo.png",
+      "extra": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
+	],
+	"interests": ["Arduino", "Raspberry Pi", "DIY Builds", "Arts & Crafts", "Frankie Shaw", "Home Automation", "LED Lights", "Dark Beer", "Bluegrass Music", "Star Wars", "Bluegrass", "Painting"],
+  "portfolio": [
+    {
+      "label" : "Bushel.ag",
+      "thumb" : "bushel_ag.png",
+      "link"  : "https://bushel.ag",
+      "ext"   : true
+    },
+
+    {
+      "label" : "Oilfield Mapping",
+      "thumb" : "mapprint_thumb.jpg",
+      "link"  : "mapping.html"
+    },
+    {
+      "label" : "Avalon Arcade",
+      "thumb" : "avalon_thumb.jpg",
+      "link"  : "avalon.html"
+    },
+    {
+      "label" : "Codepen Projects",
+      "thumb" : "codepen_thumb.png",
+      "link"  : "https://codepen.io/johnny13/",
+      "ext"   : true
+    },
+    {
+      "label" : "Style Guide Starter",
+      "thumb" : "styleguide_thumb.jpg",
+      "link"  : "images/styleguide.ai.zip"
+    },
+    {
+      "label" : "ASCII ART",
+      "thumb" : "ascii_thumb.png",
+      "link"  : "ascii.html"
+    },
+    {
+      "label" : "freshLime.com",
+      "thumb" : "freshlime_thumb.jpg",
+      "link"  : "https://www.freshlime.com",
+      "ext"   : true
+    },
+    {
+      "label" : "Rainbow Lips",
+      "thumb" : "immbackground_thumb.jpg",
+      "link"  : "artwork.html"
+    },
+    {
+      "label" : "Duotone was for Lovers",
+      "thumb" : "duotone_thumb.jpg",
+      "link"  : "frankieshaw.html"
+    }
+  ]
+}

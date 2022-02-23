@@ -149,12 +149,12 @@
   background-color: $smoky-white;
   color: $text-color-secondary;
   padding: 0;
-  -webkit-border-top-left-radius: 10px;
-  -webkit-border-bottom-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  -moz-border-radius-bottomleft: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  -webkit-border-top-left-radius: 1px;
+  -webkit-border-bottom-left-radius: 1px;
+  -moz-border-radius-topleft: 1px;
+  -moz-border-radius-bottomleft: 1px;
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
 
   .inside {
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -204,7 +204,7 @@
   }
 
   #keywords {
-    margin: 30px auto 0 auto;
+    margin: 0 auto 0 auto;
     height: 260px;
     display: block;
     position: relative;

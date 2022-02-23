@@ -8,6 +8,7 @@
 
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 801px) {
+
   .sidebar-wrapper {
     position: static;
     width: inherit;
@@ -36,11 +37,11 @@
   }
 
   .contact-container {
-    margin-top: -1.8rem !important;
+    margin-top: -1.8rem!important;
   }
 
   .profile .avatar {
-    height: 400px !important;
+    height: 400px!important;
   }
 }
 
@@ -48,55 +49,53 @@
 @media (max-width: 1024px) {
   .edu-section {
     .item_title span.footnote.gpa {
-      display: none !important;
+      display: none!important;
     }
 
     .edu-item-0 {
-      padding-right: 0 !important;
+      padding-right: 0!important;
     }
 
     .edu-item-1 {
-      padding-left: 0 !important;
+      padding-left: 0!important;
     }
   }
 }
 
 /* Medium devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
-  .skillset .level-title {
-    display: inline-block;
-    float: left;
-    width: 30%;
-    margin-bottom: 0;
-  }
 
-  .skillset .level-bar {
-    display: inline-block;
-    width: 70%;
-    float: left;
-    position: relative;
-    top: 1px;
-  }
+    .skillset .level-title {
+        display: inline-block;
+        float: left;
+        width: 30%;
+        margin-bottom: 0;
+    }
 
-  .contact-container {
-    margin-top: -1.8rem !important;
-  }
+    .skillset .level-bar {
+        display: inline-block;
+        width: 70%;
+        float: left;
+        position: relative;
+        top: 1px;
+    }
 
-  .profile .avatar {
-    height: 400px !important;
-  }
+    .contact-container {
+      margin-top: -1.8rem!important;
+    }
+
+    .profile .avatar {
+      height: 400px!important;
+    }
 }
 
 /* Large devices (large desktops, 1160px and up) */
 @media (min-width: 1160px) {
-  .grid-sandbox {
-    width: 80%;
-    max-width: 80%;
-    min-width: 1024px;
-    margin: 3.33rem auto;
-  }
+
 }
+
 
 /* Ex-Large devices (large desktops, 1400px and up) */
 @media (min-width: 1400px) {
+
 }
