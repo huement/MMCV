@@ -35,10 +35,9 @@ function rainCloud() {
   $("#keywords").jQCloud(notes, {
     autoResize: true,
     shape: "rectangular",
-    fontSize: ["0.6rem", "1.2rem"],
+    fontSize: ["1rem", "2.3rem"],
     colors: ["#412C64", "#7767AD", "#108AB1", "#3BB273", "#E9724C", "#CB2D54"],
     height: 260,
-    removeOverflowing: false,
   });
 }
 
