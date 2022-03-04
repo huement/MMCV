@@ -6,7 +6,6 @@ source 'https://rubygems.org'
 gem 'middleman', '~> 4.3.0.rc.3'
 gem 'middleman-syntax'
 gem 'middleman-title'
-gem 'middleman-build-reporter'
 
 ## Middleman Extensions
 ###############################
@@ -19,6 +18,11 @@ gem 'middleman-minify-html'
 gem 'middleman-svg'
 gem 'middleman-s3_sync'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
+gem 'middleman-blog'
+gem "middleman-imageoptim", '~> 0.3.0'
+
+#gem 'middleman-build-reporter'
+
 #gem 'middleman-pdfkit'
 #gem "middleman-sitemap", :git => "https://github.com/matsu911/middleman-sitemap"
 

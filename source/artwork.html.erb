@@ -1,11 +1,12 @@
 ---
 title: Art Gallery
-layout: "layout"
+layout: "simple"
 ---
 
 <% content_for :assets do %>
   <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Cabin+Sketch:700|Libre+Barcode+128+Text' %>
 <% end %>
+
 
 <canvas id="granim-canvas" class="art-page"></canvas>
 
@@ -24,10 +25,10 @@ layout: "layout"
         <div class="masonry js-masonry js-images-loaded">
 
           <% data.artworks.each_with_index do |artwork,index| %>
-            <div class="masonry__item js-masonry-item" data-target="#<%= slug_text artwork[0] %>">
+            <div class="masonry__item js-masonry-item" data-target="#<%= slug_text artwork.name %>">
               <figure>
                 <picture>
-                  <img src="<%= artwork[1][3] %>" alt="<%= artwork[0] %>" />
+                  <img src="<%= artwork.path %>" alt="<%= artwork.name %>" />
                 </picture>
               </figure>
             </div>
@@ -40,32 +41,25 @@ layout: "layout"
 
   <!-- DETAILED OVERLAYS -->
   <% data.artworks.each_with_index do |artwork,index| %>
-    <div id="<%= slug_text artwork[0] %>" class="port">
+    <div id="<%= slug_text artwork.name %>" class="port">
   	  <div class="port_wrap">
+
 
         <div class="grid">
       		<div class="c-50--lap-and-up grid__cell">
             <div class="title-box">
-              <h1><%= artwork[1][0] %></h1>
-              <h2><%= artwork[1][1] %></h2>
+              <h1><%= artwork.name %></h1>
+              <h2>By: <%= artwork.artist %></h2>
             </div>
       			<div class="description">
-        			<p><%= artwork[1][2] %></p>
+        			<p><%= artwork.details %></p>
             </div>
       		</div>
+
           <div class="c-50--lap-and-up grid__cell">
-            <% if artwork[1][4] %>
-              <a href="<%= artwork[1][4] %>">
-                <img src="<%= artwork[1][4] %>" alt="<%= artwork[0] %>" />
-              </a>
-              <a href="<%= artwork[1][3] %>">
-                <img src="<%= artwork[1][3] %>" alt="<%= artwork[0] %>" />
-              </a>
-            <% else %>
-              <a href="<%= artwork[1][3] %>">
-                <img src="<%= artwork[1][3] %>" alt="<%= artwork[0] %>" />
-              </a>
-            <% end %>
+            <a href="<%= artwork.path %>">
+                <img src="<%= artwork.path %>" alt="<%= artwork.name %>" />
+            </a>
             <p class="alert"><small>Click image to view full sized.</small></p>
           </div>
         </div>

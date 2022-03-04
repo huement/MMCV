@@ -19,7 +19,7 @@ page "/*.txt", layout: false
 
 #
 # With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
+
 #
 # A path which all have the same layout
 # with_layout :admin do
@@ -115,6 +115,8 @@ configure :development do
   # Append a hash to asset urls (make sure to use the url helpers)
   # activate :asset_hash
 
+
+
   # Use relative URLs
   activate :relative_assets
   set :relative_links, true
@@ -139,11 +141,13 @@ configure :build do
       source: ".tmp/dist",
       latency: 1
 
-  # For example, change the Compass output style for deployment
+  # Optimizations
   activate :minify_css
+  activate :minify_html
+  activate :imageoptim
 
   # Append a hash to asset urls (make sure to use the url helpers)
-  # activate :asset_hash
+  activate :asset_hash
 
   # Use relative URLs
   activate :relative_assets
@@ -185,7 +189,7 @@ configure :production do
     deploy.deploy_method = :git
     # remote is optional (default is "origin")
     # run `git remote -v` to see a list of possible remotes
-    deploy.remote = "https://github.com/huement/MMCV"
+    deploy.remote = "https://github.com/huement/MMCV.git"
 
     # branch is optional (default is "gh-pages")
     # run `git branch -a` to see a list of possible branches

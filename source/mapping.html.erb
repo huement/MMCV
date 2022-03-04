@@ -1,4 +1,69 @@
-<div class="main_area mapping">
-  <h2>Oilfield Mapping</h2>
-  <h4>Managing oilfield data on the fly</h4>
+---
+title: Oilfield Mapping
+layout: "simple"
+---
+
+<% content_for :assets do %>
+  <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Cabin+Sketch:700|Libre+Barcode+128+Text' %>
+<% end %>
+
+<canvas id="granim-canvas" class="art-page"></canvas>
+
+<div class="artwork" id="artpage">
+
+  <header>
+    <h1>Oilfield GPS<br><span>Crowd-Sourced Paper & Digital Maps</span></h1>
+  </header>
+
+  <div id="top"></div>
+
+  <!-- IMAGE GALLERY -->
+  <section class="gallery">
+  	<div class="row">
+      <div class="art-grid">
+        <div class="masonry js-masonry js-images-loaded">
+
+          <% data.oilfield.each_with_index do |artwork,index| %>
+            <div class="masonry__item js-masonry-item" data-target="#<%= slug_text artwork.name %>">
+              <figure>
+                <picture>
+                  <img src="<%= artwork.path %>" alt="<%= artwork.name %>" />
+                </picture>
+              </figure>
+            </div>
+          <% end %>
+
+        </div>
+      </div>
+  	</div>
+  </section>
+
+  <!-- DETAILED OVERLAYS -->
+  <% data.oilfield.each_with_index do |artwork,index| %>
+    <div id="<%= slug_text artwork.name %>" class="port">
+  	  <div class="port_wrap">
+
+        <div class="grid">
+      		<div class="c-50--lap-and-up grid__cell">
+            <div class="title-box">
+              <h1><%= artwork.name %></h1>
+              <h2>By: <%= artwork.artist %></h2>
+            </div>
+      			<div class="description">
+        			<p><%= artwork.details %></p>
+            </div>
+      		</div>
+
+          <div class="c-50--lap-and-up grid__cell">
+            <a href="<%= artwork.path %>">
+                <img src="<%= artwork.path %>" alt="<%= artwork.name %>" />
+            </a>
+            <p class="alert"><small>Click image to view full sized.</small></p>
+          </div>
+        </div>
+
+      </div>
+  	</div>
+  <% end %>
+
 </div>

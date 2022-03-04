@@ -17,12 +17,18 @@
 
   <!-- meta social -->
   <%= tag :meta, :content => "#{data.resume.info.myname}'s Resume", :property => 'author' %>
-  <%= tag :meta, :content => "#{data.resume.info.desc}", :property => 'description' %>
 
   <%= tag :meta, :content => "#{data.resume.info.homepage}", :property => 'og:url' %>
   <%= tag :meta, :content => 'website', :property => 'og:type' %>
   <%= tag :meta, :content => "#{data.resume.info.myname}'s Resume", :property => 'og:title' %>
-  <%= tag :meta, :content => "#{data.resume.info.desc}", :property => 'og:description' %>
+
+  <% if current_page.metadata[:page].try(:[], 'description') %>
+    <meta name="description" content="<%= current_page.metadata[:page]['description'] %>">
+    <meta name="og:description" content="<%= current_page.metadata[:page]['description'] %>">
+  <% else %>
+    <%= tag :meta, :content => "#{data.resume.info.desc}", :property => 'description' %>
+    <%= tag :meta, :content => "#{data.resume.info.desc}", :property => 'og:description' %>
+  <% end %>
 
   <!-- GLOBAL CSS -->
   <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">

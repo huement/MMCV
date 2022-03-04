@@ -7,13 +7,22 @@ layout: "layout"
   <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Cabin+Sketch:700|Libre+Barcode+128+Text' %>
 <% end %>
 
-<div class="main_area ascii">
-  <div class="header">
+<canvas id="granim-canvas" class="art-page"></canvas>
+
+<div class="artwork" id="artpage">
+
+  <header>
     <h1>ART GOES ANALOG</h1>
     <p>I love using code to generate cool new things. Such as taking a logo I had previously made, as converting it to ASCII Artwork.</p>
-  </div>
+  </header>
 
-  <div class="ascii-project">
+  <div id="top"></div>
+
+  <!-- IMAGE GALLERY -->
+  <section class="gallery">
+  	<div class="row">
+
+     <div class="ascii-project">
 
     <div class="grid">
       <div class="c-50--lap-and-up grid__cell">
@@ -128,4 +137,10 @@ layout: "layout"
 ......................................................................
 </pre>
   </div>
+</div>
+
+
+  	</div>
+  </section>
+
 </div>
