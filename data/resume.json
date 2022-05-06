@@ -1,7 +1,7 @@
 {
   "headers": {
     "profile": "Profile",
-    "skills": "Areas of Expertise ",
+    "skills": "Areas of Expertise",
     "portfolio": "Design Portfolio",
     "techs": "Technical",
     "jobs": "Work History",
@@ -46,8 +46,8 @@
   ],
   "references": [
     {
-      "name": "Brittney Meyers",
-      "phone": "218-227-9033",
+      "name": "Rhonda Grimmer",
+      "phone": "701-770-5926",
       "title": "Personal Reference",
       "icon": "caticorn.png"
     },
@@ -71,7 +71,7 @@
   "languages": [
     {
       "name": "Javascript",
-      "level": "83",
+      "level": "93",
       "label": "React,Angular,Typescript"
     },
     {
@@ -81,12 +81,12 @@
     },
     {
       "name": "Web Design",
-      "level": "94",
-      "label": "SCSS,SASS,PostCSS"
+      "level": "91",
+      "label": "SCSS,Webpack,PostCSS"
     },
     {
       "name": "Ruby",
-      "level": "59",
+      "level": "66",
       "label": "Docker,Rails,Middleman"
     },
     {
@@ -100,14 +100,14 @@
       "title": "Freelance / Private Contractor",
       "company": "Self Employed",
       "url": "https://huement.com/",
-      "time": "Jan 2019 - Current",
+      "time": "Jan 2021 - Current",
       "desc": "Built numerous websites for new companies, mostly Wordpress based, some Shopify and related platforms. Also build an Oilfield mapping, crowd-sourced location app. It provided driving directions & oilfield information on Android, iOS and even Garmin GPS devices."
     },
     {
       "title": "Full Stack Web Developer",
       "company": "Myriad Mobile",
       "url": "https://myriadmobile.com/",
-      "time": "Sept 2016 - Oct 2018",
+      "time": "Sept 2016 - Oct 2020",
       "desc": "Built and maintained company Wordpress sites. Worked in small teams to design and build both public and private customer web apps. Performed various full stack jobs, working with both front and back end libraries, including ReactJS, AngularJS, PHP 7, Docker, Vagrant, Ruby, Bulma, and a few others."
     },
     {
