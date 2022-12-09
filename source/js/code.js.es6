@@ -30,26 +30,50 @@ function fitText(item) {
 }
 
 function rainCloud() {
-  console.log(notes);
+  //console.log(notes);
   $("#keywords").html(" ").removeClass("jqcloud");
   $("#keywords").jQCloud(notes, {
     autoResize: true,
     shape: "rectangular",
-    fontSize: ["0.6rem", "1.2rem"],
+    fontSize: { from: 0.13, to: 0.04 },
     colors: ["#412C64", "#7767AD", "#108AB1", "#3BB273", "#E9724C", "#CB2D54"],
-    height: 260,
-    removeOverflowing: false,
+    height: cloudHeight,
+    steps: $(".interests-list li").length,
+    removeOverflowing: true,
   });
 }
 
+let loopLimit = 1;
+function getRandom() {
+  let xw = Math.floor(Math.random() * 19 + 1);
+  if (jQuery.inArray(xw, wcheck) === -1) {
+    wcheck.push(xw);
+    return xw;
+  } else {
+    loopLimit++;
+    if (loopLimit < 20) {
+      getRandom();
+    } else {
+      xw = loopLimit * 3;
+      loopLimit = 0;
+      return xw;
+    }
+  }
+}
+
 function cloudData() {
+  let randNum = 0;
   $(".interests-list li").each(function () {
-    xw = Math.floor(Math.random() * 10 + 1);
-
-    if (jQuery.inArray(xw, wcheck) === -1) wcheck.push(xw);
-    else xw = Math.floor(Math.random() * 15 + 1);
-
-    ob = { text: $(this).text(), weight: xw };
+    // let check = true;
+    // while (check === true) {
+    //   randNum = getRandom();
+    //   if (randNum !== undefined) {
+    //     check = false;
+    //   }
+    // }
+    let randNum = Math.floor(Math.random() * 15 + 1);
+    //console.log(randNum);
+    ob = { text: $(this).text(), weight: randNum };
     notes.push(ob);
   });
 }
@@ -134,11 +158,38 @@ function setAngle() {
 }
 
 // -------------------- [INITIALIZE]
+function menuClick() {
+  $(".slider-arrow").click(function () {
+    if ($(this).hasClass("show")) {
+      $(".sidekick,.mini-overlay").removeClass("show");
+      $("body").css("overflowY", "auto");
+      $(".slider-arrow .arrow-box .fa").removeClass("pressed");
+      $(this).removeClass("show").addClass("hide");
+    } else {
+      $(".sidekick,.mini-overlay").addClass("show");
+      $("body").css("overflowY", "hidden");
+      $(".slider-arrow .arrow-box .fa").addClass("pressed");
+      $(this).removeClass("hide").addClass("show");
+    }
+  });
 
+  $(".mini-overlay").on("click", function () {
+    $(".slider-arrow,.sidekick,.mini-overlay").removeClass("show");
+    $("body").css("overflowY", "auto");
+  });
+}
+
+let minCloudSize = "0.6rem";
+let maxCloudSize = "1.2rem";
+let cloudHeight = 300;
 jQuery(document).ready(function ($) {
   setPage();
 
-  if (mainpage === true || artpage === true) {
+  if ($(".slider-arrow")[0]) {
+    menuClick();
+  }
+
+  if ($("#granim-canvas")[0]) {
     var granimInstance = new Granim({
       element: "#granim-canvas",
       name: "granim",
@@ -154,7 +205,7 @@ jQuery(document).ready(function ($) {
     });
   }
 
-  if (mainpage === true) {
+  if ($(".fittext")[0]) {
     var elements = document.querySelectorAll(".fittext span");
 
     window.onresize = function () {
@@ -162,10 +213,20 @@ jQuery(document).ready(function ($) {
     };
 
     window.onresize();
+  }
+
+  if ($(".interests-list li")[0]) {
+    if ($(document).width() > 1120) {
+      minCloudSize = "1.2rem";
+      maxCloudSize = "2.5rem";
+      cloudHeight = 360;
+    }
 
     cloudData();
     setTimeout("rainCloud()", 150);
   }
 
-  if (artpage === true) activateArtPage();
+  if ($(".art-grid")[0]) {
+    activateArtPage();
+  }
 });

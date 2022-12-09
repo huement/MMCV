@@ -1,30 +1,58 @@
 ---
 title: AVALON ARCADE
-layout: "layout"
+layout: "simple"
 ---
 
-<div class="main_area avalon">
+<% content_for :assets do %>
+  <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Cabin+Sketch:700|Libre+Barcode+128+Text' %>
+<% end %>
 
-  <h2>Avalon Arcade</h2>
-  <h4>A <strong>WEB DEV</strong> Dashboard</h4>
+<canvas id="granim-canvas" class="art-page"></canvas>
 
-  <hr class="thirteen" />
+<div class="artwork" id="artpage">
 
-  <p>This project is a work in progress. While it's not quite a version 1.0 release, it's getting close.</p>
-  <p>The end result will be a helpful tool for debugging and development.</p>
-  <p>The list below shows some of the features that are implemented, and/or are in progress:</p>
+  <header>
+    <h1>Avalon Arcade<br><span>WEB-DEV Dashboard Concept</span></h1>
+  </header>
 
-  <div class="promo-list">
-    <ul>
-      <li>Responsive Website Debugging</li>
-      <li>Page Link Checker</li>
-      <li>Live CSS Stats</li>
-      <li>Styleguide Generator</li>
-      <li>A11Y Compatibility</li>
-    </ul>
-  </div>
+  <div id="top"></div>
 
-  <div class="promo-img">
-    <img src="/images/avalon.jpg" class="lg-promo-img" />
-  </div>
+  <section class="article-content">
+    <div class="push"></div>
+    <div class="grid-sandbox">
+      <div class="grid">
+        <div class="c-100 grid__cell">
+          <div class="promo-img">
+            <img src="/images/avalon.jpg" class="lg-promo-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="push"></div>
+  </section>
+
+  <section class="intro">
+    <div class="grid-sandbox">
+      <div class="grid">
+        <div class="c-50--lap-and-up grid__cell">
+            <div class="subtitle-aside-wrapper">
+              <p class="subtitle-aside">This project is a work in progress. While it's not quite a version 1.0 release, it's getting close.<br>The end result will be a helpful tool for debugging and development.<br>The list below shows some of the features that are implemented, and/or are in progress:</p>
+            </div>
+        </div>
+        <div class="c-50--lap-and-up grid__cell">
+            <div class="promo-list">
+              <ul>
+                <li>Responsive Website Debugging</li>
+                <li>Page Link Checker</li>
+                <li>Live CSS Stats</li>
+                <li>Styleguide Generator</li>
+                <li>A11Y Compatibility</li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="push"></div>
+  </section>
+
 </div>

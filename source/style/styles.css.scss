@@ -20,8 +20,8 @@
 @import "_navbar.scss";
 
 @media screen {
-  @import "_responsive.scss";
   @import "_resume.scss";
+  @import "_responsive.scss";
 }
 
 @media print {

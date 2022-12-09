@@ -66,8 +66,8 @@ finishIt()
     echo ""
     echo "       --------------------------------"
     echo ""
-    echo "       Finished Size: $(du -sh ./build)"
-    echo "          Total Time:  ${runtime}        Seconds"
+    echo -e "       Finished Size: $(du -sh ./build)"
+    echo -e "          Total Time:  ${runtime}        Seconds"
     echo ""
     echo ""
 }
@@ -88,7 +88,10 @@ shopt -s nullglob
 newJSONFile()
 {
     echo -e "  Adding new entry:\n    ${3}\n"
-    $JO -p name="${1}" path="${2}" artist="${ARTIST}" details="${EXAMPLE}" >"${3}"
+    echo -e 'name=' "${1}"
+    echo -e "\n"
+    touch "${3}"
+    $JO -p name="${1}" path="${2}" artist="${ARTIST}" details="${EXAMPLE}" | tee -a "${3}"
 }
 
 artJSON()
@@ -114,6 +117,8 @@ buildJSON()
         FCHECK="./data/${1}/${EXTLESS}.json"
         FPATH="/images/${1}/${FNAME}"
 
+        echo -e "\n${FNAME} ${EXTLESS} ${FCHECK} ${FPATH}\n"
+
         if [ -f "$FCHECK" ]; then
             echo -e "\n${FCHECK} JSON PRESENT!"
         else
@@ -128,10 +133,11 @@ buildJSON()
     fi
 
     # create final json file from individual files
-    jq -s 'flatten' ./data/"${1}"/*.json >"${FINAL}"
+    touch $FINAL
+    jq -s 'flatten' ./data/"${1}"/*.json | tee -a "${FINAL}"
 
     # remove unneeded individual files
-    rm -r ./data/"${1}"
+    #rm -r ./data/"${1}"
 }
 
 ###
@@ -171,7 +177,7 @@ done
 ###
 
 if [ "$A" = true ]; then
-    MIDDLECMD='NO_CONTRACTS=true bundle exec middleman server --verbose'
+    MIDDLECMD='NO_CONTRACTS=true bundle exec middleman server'
     MIDMSG='LIVE RELOAD'
 fi
 

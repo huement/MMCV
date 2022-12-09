@@ -11,23 +11,29 @@ layout: "layout"
 
 <div class="grid-sandbox" id="resume_content">
   <div class="grid">
-      <div class="c-33--lap-and-up c-25--desk-and-up grid__cell accent-back sidekick">
 
-        <%= partial 'sections/profile' %>
-        <%= partial 'sections/contact' %>
+      <a href="javascript:void(0);" class="slider-arrow"><p class="arrow-box"><i class="fa fa-th fa-2x animate"></i></p></a>
+      <div class="c-33--lap-and-up c-25--desk-and-up grid__cell accent-back sidekick animate">
 
-        <div class="inside">
+        <div class="sidekick-inner">
+          <%= partial 'sections/profile' %>
+          <%= partial 'sections/contact' %>
 
-          <%= partial 'sections/interests' %>
-          <%= partial 'sections/references' %>
-          <%= partial 'sections/skills' %>
+          <div class="inside">
+            <%= partial 'sections/interests' %>
+            <%= partial 'sections/references' %>
+            <%= partial 'sections/skills' %>
 
+          </div>
+
+          <%= partial 'sections/download' %>
         </div>
-
-        <%= partial 'sections/download' %>
 
       </div>
 
+      <div class="mini-overlay animate"></div>
+
+      <!-- Fortuna dea me ad astra ferat -->
       <div class="c-66--lap-and-up c-75--desk-and-up grid__cell superhero">
 
         <%= partial 'sections/summary' %>

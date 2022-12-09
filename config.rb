@@ -1,36 +1,33 @@
-###
-###     _______ _______                    ___ __
-###    |   |   |   |   |.----.-----.-----.'  _|__|.-----.
-###    |       |       ||  __|  _  |     |   _|  ||  _  |
-###    |__|_|__|__|_|__||____|_____|__|__|__| |__||___  |
-###                                               |_____|
-###    --------------------------------------------------
-###
-
 require 'pathname'
 require 'redcarpet'
 
-###
-### Page Layout Changes:
-###
-page "/*.xml", layout: false
-page "/*.json", layout: false
-page "/*.txt", layout: false
+# Layouts
+# https://middlemanapp.com/basics/layouts/
 
-#
+# Per-page layout changes
+page '/*.xml', layout: false
+page '/*.json', layout: false
+page '/*.txt', layout: false
+
 # With alternative layout
+# page '/path/to/file.html', layout: 'other_layout'
 
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+# Proxy pages
+# https://middlemanapp.com/advanced/dynamic-pages/
 
-# Proxy (fake) files
-# page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
-#   @which_fake_page = "Rendering a fake page with a variable"
-# end
+# proxy(
+#   '/this-page-has-no-template.html',
+#   '/template-file.html',
+#   locals: {
+#     which_fake_page: 'Rendering a fake page with a local variable'
+#   },
+# )
 
+#THOR_SILENCE_DEPRECATION
+
+# Helpers
+# Methods defined in the helpers block are available in templates
+# https://middlemanapp.com/basics/helper-methods/
 ###
 ### Helpers
 ###
@@ -144,7 +141,34 @@ configure :build do
   # Optimizations
   activate :minify_css
   activate :minify_html
-  activate :imageoptim
+  activate :imageoptim do |options|
+    # Use a build manifest to prevent re-compressing images between builds
+    options.manifest = true
+
+    # Silence problematic image_optim workers
+    options.skip_missing_workers = true
+
+    # Cause image_optim to be in shouty-mode
+    options.verbose = true
+
+    # Setting these to true or nil will let options determine them (recommended)
+    options.nice = true
+    options.threads = true
+
+    # Image extensions to attempt to compress
+    options.image_extensions = %w(.png .jpg .gif .svg)
+
+    # Compressor worker options, individual optimisers can be disabled by passing
+    # false instead of a hash
+    options.advpng    = { :level => 1 }
+    options.gifsicle  = { :interlace => false }
+    options.jpegoptim = { :strip => ['all'], :max_quality => 90 }
+    options.jpegtran  = { :copy_chunks => false, :progressive => true, :jpegrescan => true }
+    options.optipng   = false
+    options.pngcrush  = { :chunks => ['allb'], :fix => false, :brute => false, :blacken => false }
+    options.pngout    = { :copy_chunks => false, :strategy => 3 }
+    options.svgo      = false
+  end
 
   # Append a hash to asset urls (make sure to use the url helpers)
   activate :asset_hash
@@ -185,17 +209,17 @@ configure :production do
   #
   # Middleman-deploy configuration
   #
-  activate :deploy do |deploy|
-    deploy.deploy_method = :git
-    # remote is optional (default is "origin")
-    # run `git remote -v` to see a list of possible remotes
-    deploy.remote = "https://github.com/huement/MMCV.git"
+  # activate :deploy do |deploy|
+  #   deploy.deploy_method = :git
+  #   # remote is optional (default is "origin")
+  #   # run `git remote -v` to see a list of possible remotes
+  #   deploy.remote = "https://github.com/huement/MMCV.git"
 
-    # branch is optional (default is "gh-pages")
-    # run `git branch -a` to see a list of possible branches
-    deploy.branch = "public"
+  #   # branch is optional (default is "gh-pages")
+  #   # run `git branch -a` to see a list of possible branches
+  #   deploy.branch = "public"
 
-    # strategy is optional (default is :force_push)
-    deploy.strategy = :submodule
-  end
+  #   # strategy is optional (default is :force_push)
+  #   deploy.strategy = :submodule
+  # end
 end

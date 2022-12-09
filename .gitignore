@@ -17,20 +17,25 @@
 
 /.sass-cache
 
-/source/.sass-cache
+source/.sass-cache
 
 /build
 
 /tmp
 
-/.tmp
+.tmp
 
 /Gemfile.lock
 
-/.ruby-version
+.ruby-version
 
-/vendor
+vendor/*
 
-/node_modules
+node_modules/*
 
-/.history
+.history
+.history/*
+
+workspace.code-workspace
+
+.DS_Store

@@ -20,6 +20,7 @@
     "email": "derek@huement.com",
     "phone": "(701)-770-3428",
     "homepage": "https://huement.github.io/MMCV/",
+    "homepage_display": "huement.github.io",
     "github": "https://github.com/johnny13",
     "linkedin": "http://linkedin/derekscott13",
     "twitter": "http://twitter.com/huement",
@@ -71,36 +72,43 @@
   "languages": [
     {
       "name": "Javascript",
-      "level": "93",
-      "label": "React,Angular,Typescript"
+      "level": "97",
+      "label": "<span>Fluent in</span>:  React, Node.js, Typescript"
     },
     {
       "name": "PHP 7+",
-      "level": "88",
-      "label": "Wordpress,Laravel,Silex"
+      "level": "85",
+      "label": "<span>Live for</span>:  Laravel, Wordpress, Silex"
     },
     {
       "name": "Web Design",
-      "level": "91",
-      "label": "SCSS,Webpack,PostCSS"
+      "level": "92",
+      "label": "<span>Stylin</span>:  SASS, Webpack, PostCSS, Svelte"
     },
     {
-      "name": "Ruby",
+      "name": "Databased",
       "level": "66",
-      "label": "Docker,Rails,Middleman"
+      "label": "<span>Queryable</span>:  Docker APIs, GraphQL, MariaDB, MySQL"
     },
     {
-      "name": "Unix",
-      "level": "72",
-      "label": "Shell,Debian,Rice"
+      "name": "Server Admin",
+      "level": "78",
+      "label": "<span>Posting Up</span>:  Amazon AWS, Apache, Lighttpd, Middleman"
     }
   ],
   "jobs": [
     {
+      "title": "Senior Developer",
+      "company": "Devii",
+      "url": "https://www.devii.io/",
+      "time": "Jan 2022 - Nov 2022",
+      "desc": "Worked with Devii.io to bring their Figma Mockups into reality using the React Admin framework. Integrated their Graph-QL APIs into a workable prototype and MVP that early adopters are able to use and get valuable early feedback. Helped them structure their frontend site, the build tools, and integration with various design tools & frameworks."
+    },
+    {
       "title": "Freelance / Private Contractor",
       "company": "Self Employed",
       "url": "https://huement.com/",
-      "time": "Jan 2021 - Current",
+      "time": "Nov 2020 - Jan 2022",
       "desc": "Built numerous websites for new companies, mostly Wordpress based, some Shopify and related platforms. Also build an Oilfield mapping, crowd-sourced location app. It provided driving directions & oilfield information on Android, iOS and even Garmin GPS devices."
     },
     {
@@ -172,13 +180,17 @@
   "interests": [
     "Arduino",
     "RaspberryPi",
-    "DIY",
+    "D.I.Y.",
     "Painting",
     "Frankie Shaw",
     "Automation",
     "Hackintosh",
+    "Smart Homes",
+    "ReactJS",
+    "MacOS",
+    "Typography",
     "ANSI Art",
-    "DarkBeer",
+    "Dark Beer",
     "Bluegrass",
     "Pumpkins",
     "Palettes",

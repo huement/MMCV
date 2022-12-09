@@ -13,6 +13,7 @@
             <progress class="progbar skill-<%= index %>" max="100" value="<%= skill.level %>" data-level="<%= skill.level %>">
               <strong>Skill Level: <%= skill.level %>%</strong>
             </progress>
+            <p class="skill-label"><%= skill.label %></p>
           </li>
           <% end %>
         </ul>
@@ -36,6 +37,8 @@
             <progress class="progbar skill-<%= index %>" max="100" value="<%= skill.level %>" data-level="<%= skill.level %>">
               <strong>Skill Level: <%= skill.level %>%</strong>
             </progress>
+
+            <p class="skill-label"><%= skill.label %></p>
           </li>
           <% end %>
         </ul>

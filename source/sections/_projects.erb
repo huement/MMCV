@@ -11,7 +11,9 @@
                 <ul class="demo-2 effect list-unstyled">
                   <!-- <li class="hidden-block"><p class="zero"><%= project.extra %></p></li> -->
                   <li class="img-block">
-                    <img src="/images/<%= project.img %>" class="item_img top" />
+                    <% if project.url? %><a href="<%= project.url %>" target=_blank><% end %>
+                      <img src="/images/<%= project.img %>" class="item_img top" />
+                    <% if project.url? %></a><% end %>
                   </li>
                 </ul>
 

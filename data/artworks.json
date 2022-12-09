@@ -1,5 +1,11 @@
 [
   {
+    "name": "alice",
+    "path": "/images/artworks/alice.jpg",
+    "artist": "Derek Scott",
+    "details": "todo..."
+  },
+  {
     "name": "BusinessCard_Mock-01",
     "path": "/images/artworks/BusinessCard_Mock-01.png",
     "artist": "Derek Scott",
@@ -8,6 +14,42 @@
   {
     "name": "Capricorn",
     "path": "/images/artworks/Capricorn.png",
+    "artist": "Derek Scott",
+    "details": "todo..."
+  },
+  {
+    "name": "disney",
+    "path": "/images/artworks/disney.png",
+    "artist": "Derek Scott",
+    "details": "todo..."
+  },
+  {
+    "name": "eve2",
+    "path": "/images/artworks/eve2.png",
+    "artist": "Derek Scott",
+    "details": "todo..."
+  },
+  {
+    "name": "eve",
+    "path": "/images/artworks/eve.png",
+    "artist": "Derek Scott",
+    "details": "todo..."
+  },
+  {
+    "name": "heraldry",
+    "path": "/images/artworks/heraldry.jpg",
+    "artist": "Derek Scott",
+    "details": "todo..."
+  },
+  {
+    "name": "iphone2",
+    "path": "/images/artworks/iphone2.jpg",
+    "artist": "Derek Scott",
+    "details": "todo..."
+  },
+  {
+    "name": "iphone",
+    "path": "/images/artworks/iphone.jpg",
     "artist": "Derek Scott",
     "details": "todo..."
   },
@@ -24,92 +66,8 @@
     "details": "todo..."
   },
   {
-    "name": "RainbowSmile",
-    "path": "/images/artworks/RainbowSmile.jpeg",
-    "artist": "Derek Scott",
-    "details": "todo..."
-  },
-  {
-    "name": "RetroTV",
-    "path": "/images/artworks/RetroTV.png",
-    "artist": "Derek Scott",
-    "details": "todo..."
-  },
-  {
-    "name": "SketchMockup",
-    "path": "/images/artworks/SketchMockup.png",
-    "artist": "Derek Scott",
-    "details": "todo..."
-  },
-  {
-    "name": "Style_Tile",
-    "path": "/images/artworks/Style_Tile.png",
-    "artist": "Derek Scott",
-    "details": "todo..."
-  },
-  {
-    "name": "TechnicalDifficulties",
-    "path": "/images/artworks/TechnicalDifficulties.jpg",
-    "artist": "Derek Scott",
-    "details": "todo..."
-  },
-  {
-    "name": "VHS",
-    "path": "/images/artworks/VHS.png",
-    "artist": "Derek Scott",
-    "details": "todo..."
-  },
-  {
-    "name": "alice",
-    "path": "/images/artworks/alice.jpg",
-    "artist": "Derek Scott",
-    "details": "todo..."
-  },
-  {
-    "name": "disney",
-    "path": "/images/artworks/disney.png",
-    "artist": "Derek Scott",
-    "details": "todo..."
-  },
-  {
-    "name": "eve",
-    "path": "/images/artworks/eve.png",
-    "artist": "Derek Scott",
-    "details": "todo..."
-  },
-  {
-    "name": "eve2",
-    "path": "/images/artworks/eve2.png",
-    "artist": "Derek Scott",
-    "details": "todo..."
-  },
-  {
-    "name": "heraldry",
-    "path": "/images/artworks/heraldry.jpg",
-    "artist": "Derek Scott",
-    "details": "todo..."
-  },
-  {
-    "name": "iphone",
-    "path": "/images/artworks/iphone.jpg",
-    "artist": "Derek Scott",
-    "details": "todo..."
-  },
-  {
-    "name": "iphone2",
-    "path": "/images/artworks/iphone2.jpg",
-    "artist": "Derek Scott",
-    "details": "todo..."
-  },
-  {
     "name": "mumford",
     "path": "/images/artworks/mumford.png",
-    "artist": "Derek Scott",
-    "details": "todo..."
-  },
-  {
-    "name": "printer",
-    "path": "/images/artworks/printer.png",
     "artist": "Derek Scott",
     "details": "todo..."
   },
@@ -120,8 +78,26 @@
     "details": "todo..."
   },
   {
+    "name": "printer",
+    "path": "/images/artworks/printer.png",
+    "artist": "Derek Scott",
+    "details": "todo..."
+  },
+  {
     "name": "rainbow-grunge",
     "path": "/images/artworks/rainbow-grunge.jpg",
+    "artist": "Derek Scott",
+    "details": "todo..."
+  },
+  {
+    "name": "RainbowSmile",
+    "path": "/images/artworks/RainbowSmile.jpeg",
+    "artist": "Derek Scott",
+    "details": "todo..."
+  },
+  {
+    "name": "RetroTV",
+    "path": "/images/artworks/RetroTV.png",
     "artist": "Derek Scott",
     "details": "todo..."
   },
@@ -138,6 +114,12 @@
     "details": "todo..."
   },
   {
+    "name": "SketchMockup",
+    "path": "/images/artworks/SketchMockup.png",
+    "artist": "Derek Scott",
+    "details": "todo..."
+  },
+  {
     "name": "snow-white",
     "path": "/images/artworks/snow-white.png",
     "artist": "Derek Scott",
@@ -150,8 +132,20 @@
     "details": "todo..."
   },
   {
+    "name": "Style_Tile",
+    "path": "/images/artworks/Style_Tile.png",
+    "artist": "Derek Scott",
+    "details": "todo..."
+  },
+  {
     "name": "taylor",
     "path": "/images/artworks/taylor.jpg",
+    "artist": "Derek Scott",
+    "details": "todo..."
+  },
+  {
+    "name": "TechnicalDifficulties",
+    "path": "/images/artworks/TechnicalDifficulties.jpg",
     "artist": "Derek Scott",
     "details": "todo..."
   },
@@ -170,6 +164,12 @@
   {
     "name": "triangle",
     "path": "/images/artworks/triangle.jpg",
+    "artist": "Derek Scott",
+    "details": "todo..."
+  },
+  {
+    "name": "VHS",
+    "path": "/images/artworks/VHS.png",
     "artist": "Derek Scott",
     "details": "todo..."
   }
