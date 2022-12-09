@@ -1,0 +1,40 @@
+# coding: utf-8
+
+require 'middleman-gh-pages'
+
+#
+# Configuration Parameters 
+#
+# @deploy_cmd set command to deploy your website
+#
+# use the special symbol __build_dir__ to indicate the build directory.
+# At runtime, __build_dir__ will be replaced by the appropriate build
+# dir.
+#
+# If you need to deploy to different environments with different
+# commands, you can create a file _env-<environment name>.rb (e.g.,
+# _env-production.rb), where you can customize the variables for the
+# specific environment.
+#
+# Example
+#
+#     rsync -avz __build_dir__ user@example.com:/dest/dir/
+#
+
+@deploy_cmd = "rake publish BRAND_NAME=public PROJECT_ROOT=build"
+
+# git_check    if true, block deployment if the monitored remote branch is ahead of
+#              the current branch.  Publishing an out-of-date
+#              repository, in fact, could cause a regression on the content of the
+#              website
+#
+# git_autopush if true, after deployment, add, commit, and change any local
+#              change to the remote repository
+#
+# git_branch   the remote branch to monitor.  It defaults to master; gh-pages is the
+#              value you want for GitHub pages.
+#
+
+#@git_check ||= true
+#@git_autopush ||= false
+#@git_branch ||= "master"

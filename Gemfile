@@ -23,6 +23,7 @@ gem 'middleman-blog'
 #gem "middleman-imageoptim", '~> 0.3.0'
 gem 'middleman-imageoptim', :git => 'https://github.com/alexsanderson/middleman-imageoptim', :branch => 'master'
 #gem 'middleman-deploy', '~> 1.0'
+gem 'middleman-gh-pages'
 
 #gem 'middleman-build-reporter'
 
