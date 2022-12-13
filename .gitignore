@@ -39,3 +39,4 @@ workspace.code-workspace
 .DS_Store
 
 build/*
+build/
